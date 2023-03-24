@@ -1,0 +1,88 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+    <!-- index CSS -->
+    <link rel="stylesheet" type="text/css" href="{%static 'CoreTheme_css/styles.css' %}">
+    <!-- index CSS -->
+    <link rel="stylesheet" type="text/css" href="{%static 'CoreTheme_css/sign-in-css/sign-in.css' %}">
+
+
+    <title>Hello, pybo!</title>
+
+</head>
+<body>
+<!-- 네비게이션바 -->
+{% include "navbar.html" %}
+
+<!-- 기본 템플릿 안에 삽입 될 내용 Start -->
+{% block content %}
+{% endblock%}
+<!-- 기본 템플릿 안에 삽입 될 내용 End -->
+
+<!-- jquery js -->
+<script src="{% static 'jquery-3.6.4.min.js' %}"></script>
+<!-- Bootstrap js -->
+<script src="{% static 'bootstrap.min.js' %}"></script>
+<!-- index CSS -->
+<link rel="stylesheet" type="text/css" href="{%static 'CoreTheme_css/sign-in-js/scripts.js' %}">
+<!-- 자바스크립트 Start -->
+{% block script %}
+{% endblock %}
+<!-- 자바스크립트 End -->
+</body>
+</html>
+{% comment %}  body 엘리먼트에 {%block content %}와 {% endblock %} 템플릿 태그가 있다. 
+이부분이 base.html 템플릿 파일을 상속한 파일에서 구현해야할 영역이다.  {% endcomment %}
+
+{% comment %} 《두잇 장고》는 파이썬 웹 프로그래밍을 배우는데 초점을 맞춘 책으로, 
+프로그래밍 경험이 없는 초보자들도 파이썬과 장고를 배울 수 있도록 구성되어 있습니다.
+
+각 HTML 파일에 대한 설명은 다음과 같습니다.
+
+base.html : 웹 사이트의 모든 페이지에서 공통적으로 사용되는 HTML 코드를 담고 있습니다. 
+이 파일을 기반으로 다른 HTML 파일을 만들게 됩니다.
+index.html : 웹 사이트의 메인 페이지를 담당합니다. 최신 질문 목록과 검색 기능을 포함합니다.
+detail.html : 질문의 상세 내용을 보여주는 페이지입니다. 질문과 답변 내용, 답변 작성 폼을 담고 있습니다.
+answer_form.html : 답변 작성 폼을 담고 있는 페이지입니다. 이 폼을 통해 새로운 답변을 작성할 수 있습니다.
+question_form.html : 질문 작성 폼을 담고 있는 페이지입니다. 이 폼을 통해 새로운 질문을 작성할 수 있습니다.
+question_modify.html : 질문을 수정할 수 있는 페이지입니다. 이 폼을 통해 질문의 제목과 내용을 수정할 수 있습니다.
+answer_modify.html : 답변을 수정할 수 있는 페이지입니다. 이 폼을 통해 답변 내용을 수정할 수 있습니다.
+signup.html : 회원 가입 페이지입니다. 이 폼을 통해 새로운 사용자 계정을 만들 수 있습니다.
+login.html : 로그인 페이지입니다. 이 폼을 통해 사용자 계정으로 로그인할 수 있습니다.
+my_page.html : 사용자 정보와 작성한 질문/답변 목록 등을 보여주는 페이지입니다.
+password_change.html : 비밀번호 변경 폼을 담고 있는 페이지입니다. 
+이 폼을 통해 사용자 계정의 비밀번호를 변경할 수 있습니다. {% endcomment %}
+
+{% comment %} 장고에서 가장 기본적인 파일들은 다음과 같습니다.
+
+settings.py: 장고 프로젝트의 설정 파일로, 데이터베이스, 앱 등의 설정을 담고 있습니다.
+
+urls.py: URL 패턴을 정의하는 파일입니다. 사용자의 요청이 어떤 뷰 함수로 전달되어야 하는지 결정하는 데 사용됩니다.
+
+views.py: 앱의 뷰 함수를 정의하는 파일입니다. 뷰 함수는 HTTP 요청을 받아서, 데이터를 처리하고, 
+HTML 템플릿을 렌더링하여 HTTP 응답을 반환합니다.
+
+models.py: 앱의 데이터 모델을 정의하는 파일입니다. 데이터베이스에서 사용할 테이블과 해당 테이블의 컬럼 등을 정의합니다.
+
+templates/: HTML 템플릿 파일을 저장하는 폴더입니다. 뷰 함수에서 렌더링할 HTML 템플릿을 저장합니다.
+
+static/: 정적 파일을 저장하는 폴더입니다. CSS, JavaScript, 이미지 등의 파일을 저장합니다.
+
+migrations/: 데이터베이스 마이그레이션 파일을 저장하는 폴더입니다. 데이터베이스 스키마를 변경할 때, 
+이 폴더에서 마이그레이션 파일을 생성하고, 데이터베이스에 적용합니다.
+
+이 파일들은 서로 다른 역할을 담당하고 있습니다. 이들 파일 간의 관계를 이해하면, 장고 프로젝트의 전체적인 구조를 파악할 수 있습니다. 
+이를테면, urls.py에서 정의한 URL 패턴은 views.py의 뷰 함수와 연결되어 사용자의 요청을 처리합니다. 
+views.py에서는 models.py에서 정의한 데이터 모델을 사용하여 데이터를 조회하고 처리합니다. 
+templates/ 폴더의 HTML 템플릿 파일은 views.py에서 렌더링되어 사용자에게 보여지게 됩니다. 
+이와 같이 각 파일들이 서로 다른 역할을 수행하면서 상호작용하는 모습을 이해하면, 
+장고 프로젝트를 이해하는 데 도움이 됩니다. {% endcomment %}
