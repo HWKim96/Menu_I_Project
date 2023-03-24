@@ -36,11 +36,14 @@
             <div class="submit">
                 <input type="submit" value="login">
             </div>
-            <div class="submit">
-                <button onclick="window.location.href='{% url 'common:signup' %}'">signup</button>
+
+            <div class="button">
+                <input type="button" class="button" id="signup" value="Sign up" onclick="location.href='{% url 'common:signup' %}'">
+
             </div>
         </div>
     </div>
 </body>
 </html>
 {% endblock %}
+
