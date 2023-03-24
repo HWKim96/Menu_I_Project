@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load pybo_filter %}
+{% block content %}
+<div class="container my-3">
+    <!-- 검색어를 입력할 수 있는 텍스트창(질문 등록하기) -->
+    <div class="row my-3">
+        <div class="col-6">
+            <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">질문 등록하기</a>
+        </div>
+        <div class="col-6">
+            <div class="input-group">
+                <input type="text" id="search_kw" class="form-control" value="{{ kw|default_if_none:'' }}">
+                <!-- 자바 스크립트에서 이 텍스트창에 입력된 값을 읽기 위해 다음처럼 id 속성을 추가한 점에 주목 -->
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>        {% comment %} table head  {% endcomment %}
+        <tr class="text-center table-dark">
+            <th>번호</th>
+            <th style="width:50%">제목</th>
+            <th>글쓴이</th>
+            <th>작성일시</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if question_list %}
+        {% for question in question_list %}
+        <tr class="text-center">
+            <td>
+                <!-- 번호 = 전체건수 - 시작인덱스 - 현재인덱스 + 1 -->
+                {{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}
+            </td>
+            {% comment %} <td>{{ forloop.counter }}</td> 이건 그냥 번호고 위에 있는게 페이지 별로 더해지는 번호 구현하는 코드 {% endcomment %}
+            <td class="text-start">
+                <a href="{% url 'pybo:detail' question.id %}">
+                    {{ question.subject }}
+                </a>
+            </td>
+            <td>{{ question.author.username }}</td>  <!-- 글쓴이 추가 -->
+            <td>{{ question.create_date }}</td>
+        <tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="4">질문이 없습니다.</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+    <!-- 페이징 처리 시작 -->
+    <ul class="pagination justify-content-center">
+        <!-- 이전 페이지 -->
+        {% if question_list.has_previous %}
+        <li class="page-item">
+            {% comment %} <a class="page-link"
+                href="?page={{ question_list.previous_page_number }}">
+                이전
+            </a> 일단 냅둬 {% endcomment %} 
+            <a class="page-link" data-page="{{ question_list.previous_page_number }}"
+                href="javascript:void(0)">이전</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class='page-link' tabindex="-1" aria-disabled="true" href="#">
+                이전
+            </a>
+        </li>
+        {% endif %}
+        <!-- 페이지 리스트 -->
+        {% for page_number in question_list.paginator.page_range %}
+        {% if page_number >= question_list.number|add:-5 and page_number <= question_list.number|add:5 %} <!-- 책 -->
+            {% if page_number in question_list.number%}
+            <li class="page-item active" aria-current="page">
+                {% comment %} <a class="page-link" href="?page={{ page_number }}">
+                    {{ page_number }}
+                </a> {% endcomment %}
+                <a class="page-link" data-page="{{ page_number }}"
+                    href="javascript:void(0)">{{ page_number }}</a>
+            </li>
+            {% else %}
+            <li class="page-item">
+                {% comment %} <a class="page-link" href="?page={{ page_number }}">
+                    {{ page_number }}
+                </a> {% endcomment %}
+                <a class="page-link" data-page="{{ page_number }}"
+                    href="javascript:void(0)">{{ page_number }}</a>
+            </li>
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+        <!-- 다음 페이지 -->
+        {% if question_list.has_next %}
+        <li class="page-item">
+            {% comment %} <a class="page=link"
+                href="?page={{ question_list.next_page_number }}">
+                다음
+            </a> {% endcomment %}
+            <a class="page-link" data-page="{{ question_list.next_page_number }}"
+                href="javascript:void(0)">다음</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" tabindex="-1" aria-disabled="true" href="#">
+                다음
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+    <!-- 페이징 처리 끝 -->
+
+    {% comment %} <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">
+        질문 등록하기
+    </a> 위에 질문 등록하기 다시 만듦 {% endcomment %}
+</div>
+<form id="searchForm" method="get" action="{% url 'home' %}">
+    <!-- GET 방식으로 요청해야 하므로 method 속성에 "get"을 설정 -->
+    <!-- action 속성은 '폼이 전송되는 URL'이므로 질문 목록 URL인 {% url 'index' %}를 지정 -->
+    <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
+    <!--  kw와 page는 이전에 요청했던 값을 기억하고 있어야 하므로 value에 값을 대입 -->
+    <!-- 이전에 요청했던 kw와 page의 값은 index 함수로부터 전달될 것이다.-->
+    <input type="hidden" id="page" name="page" value="{{ page }}">
+</form>
+{% endblock %}
+{% block script %}
+<script type='text/javascript'>
+const page_elements = document.getElementsByClassName("page-link");
+Array.from(page_elements).forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('page').value = this.dataset.page;
+        document.getElementById('searchForm').submit();
+    });
+});
+const btn_search = document.getElementById("btn_search");
+btn_search.addEventListener('click', function() {
+    document.getElementById('kw').value = document.getElementById('search_kw').value;
+    document.getElementById('page').value = 1;  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+    document.getElementById('searchForm').submit();
+});
+</script>
+{% endblock %}
+{% comment %} ---------------------------------------------------------------------------------- {% endcomment %}
+
+{% comment %} {% if question_list %} 
+    <ul>
+    {% for question in question_list %}
+        <li><a href="{% url 'pybo:detail' question.id %}/">{{ question.subject }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>질문이 없습니다.</p>
+{% endif %}  {% endcomment %}
+
+{% comment %} --------------------------------------------------------------------------- {% endcomment %}
+
+{% comment %} {% %} <= 이렇게 생긴게 템플릿 태그 {% endcomment %}
+{% comment %} {% if question_list %} 만약 퀘스트리스트가 있다면
+    <ul>
+    {% for question in question_list %} 퀘스트리스트를 반복하여 순차적으로 퀘스트레 대입해서
+        <li><a href="/pybo/{{ question.id}}/">{{ question.subject }}</a></li> 
+        for문에 의해 대입된 퀘스트 객체의 id와 subject를 출력 하라
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>질문이 없습니다.</p>
+{% endif %}  {% endcomment %}
+
+{% comment %} 
+for 문에서는 forloop 객체를 사용할 수 있는데
+forloop.counter는 for문의 순서로 1부터 표시한다는 뜻
+forloop.counter0는 for문의 순서로 0부터 표시한다는 뜻
+forloop.first는 for문의 첫번째 순서인 경우 True라는 뜻
+forloop.last는 for문의 마지막 순서인 경우 True라는 뜻
+{% endcomment %}
