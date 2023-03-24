@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 # import mysql.connector
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -66,11 +67,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
+
+ 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'templates'], 
-        # 현재 base_dir은 c:/projects/mysite 이므로 tamplates만 붙여 c:/projects/mysite/tamplates를 반환한다.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,10 +80,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
+            ],
+            'builtins': [
+                'django.templatetags.static',
             ],
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -149,6 +157,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
+    os.path.join(BASE_DIR, 'static'),
 ]
 # 로그인 성공후 이동하는 URL
 LOGIN_REDIRECT_URL = '/' # / 페이지는 기본 URL인 http://localhost:8000/ 페이지를 의미한다.
