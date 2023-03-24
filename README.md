@@ -1,4 +1,6 @@
 # SeSAC Semi_Project Menu "I"
 <br>
 
-- main branch 입니다.
+- Python, Django, HTML, JavaScript, CSS
+
+- pip install -r requirement.txt로 필요 라이브러리 설치
