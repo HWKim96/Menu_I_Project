@@ -76,16 +76,23 @@ def upload(request):
         # select language
         lang = 'jpn'
         
-        # 선택된 언어에 대한 이름과 재료 정보 가져옴
-        cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_kor='{join_str}'")
         
-        # 결과값 전부 가져오기
-        rows = cur.fetchall()
-        # print(rows)
+        # 만약 MySQL에서 정보가 있다면 DB에서 가져오고 없다면 except를 통해 예외처리
+        try:
+            # 선택된 언어에 대한 이름과 재료 정보 가져옴
+            cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_kor='{join_str}'")
+
+            # 결과값 전부 가져오기
+            rows = cur.fetchall()
+            # print(rows)
+
+            # 두 결과값에 대한 변수 할당, 0번 자리에 튜플로 되어있음
+            sql_menu_name = rows[0][0]
+            sql_menu_info = rows[0][1]
         
-        # 두 결과값에 대한 변수 할당, 0번 자리에 튜플로 되어있음
-        sql_menu_name = rows[0][0]
-        sql_menu_info = rows[0][1]
+        except:
+            sql_menu_name = "There is no information for this menu.\n I'm sorry for the inconvenience.\n I will fix it through an update later."
+            sql_menu_info = None
         
         
         # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함
