@@ -33,8 +33,8 @@ def upload(request):
         print(join_str)
         
         # 번역 api 기능 추가
-        client_id = "ID"
-        client_secret = "PWD"
+        client_id = "lOWrKxC0PtfMDLzf2gn9"
+        client_secret = "q8xSULcjGf"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
@@ -93,7 +93,7 @@ def upload(request):
             sql_menu_info = rows[0][1]
         
         except:
-            sql_menu_name = "There is no information for this menu.\n I'm sorry for the inconvenience.\n I will fix it through an update later."
+            sql_menu_name = None
             sql_menu_info = None
         
         

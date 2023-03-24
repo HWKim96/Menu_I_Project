@@ -9,8 +9,10 @@
 	{% comment %} join_str 변수에 값이 있으면 {% endcomment %}
 		<p>Original Text: {{ join_str }}</p>
 		<p>Translated Text: {{ translated_text }}</p>
-		<p>Menu Name: {{ sql_menu_name }}</p>
-		<p>Menu Ingredients: {{ sql_menu_info }}</p>
+		{% if sql_menu_name and sql_menu_info %}
+			<p>Menu Name: {{ sql_menu_name }}</p>
+			<p>Menu Ingredients: {{ sql_menu_info }}</p>
+		{% endif %}
 		{% comment %} result 변수를 가져옴 {% endcomment %}
 	{% else %}
 		<p>Sorry. Please take a picture again.</p>
