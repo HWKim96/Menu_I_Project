@@ -90,7 +90,7 @@
                 <a class="navbar-brand" href="{% url 'home' %}"><text>Menu ' i '</text></a>
                 <!-- <a class="navbar-brand" href="#page-top"><img src="../로고/누끼딴거 로고파일로 변환한거.svg" alt="..." /></a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Big Red Button. 
+                    Tiny Menu. 
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -475,14 +475,14 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="../static/images/sesac-banner.svg" alt="..." aria-label="sesac Logo" /></a>
+                        <a href="https://www.sba.seoul.kr/"><img class="img-fluid img-brand d-block mx-auto" src="static\images\sba.svg" alt="..." aria-label="sba Logo" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="../static/images/expert-banner.svg" alt="..." aria-label="expert Logo" /></a>
+                        <a href="https://www.exc.co.kr/"><img class="img-fluid img-brand d-block mx-auto" src="static\images\expert.svg" alt="..." aria-label="expert Logo" /></a>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
+                    {% comment %} <div class="col-md-3 col-sm-6 my-3">
                         <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="../static/images/sba-banner.svg" alt="..." aria-label="sba Logo" /></a>
-                    </div>
+                    </div> {% endcomment %}
                     <!-- <div class="col-md-3 col-sm-6 my-3">
                         <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
                     </div> -->
@@ -516,7 +516,8 @@
                         <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-xl text-uppercase">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-xl text-uppercase float-right">Detect</button>
+                        <button type="submit" class="btn btn-primary btn-xl text-uppercase float-left">Submit</button>
                     </div>
                 </form>
 
