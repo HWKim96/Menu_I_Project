@@ -5,6 +5,7 @@ import easyocr
 import numpy as np
 import requests
 import json
+import mysql.connector
 
 
 def upload(request):
@@ -32,8 +33,8 @@ def upload(request):
         print(join_str)
         
         # 번역 api 기능 추가
-        client_id = "Naver Developers_Papago_api_ID"
-        client_secret = "Naver Developers_Papago_api_password"
+        client_id = "lOWrKxC0PtfMDLzf2gn9"
+        client_secret = "q8xSULcjGf"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
@@ -55,11 +56,46 @@ def upload(request):
         response = requests.post(url, headers=headers, data=data)
         # request를 통해서 json 형식으로 파일 받아옴
         result = json.loads(response.text)
+        # print(result)
         translated_text = result["message"]["result"]["translatedText"]
         # result 안에 message 객체 안 result 객체 안 translatedText (결과) 가져옴
+        
+        
+        # MySQL에서 DB 정보 가져오기
+        
+        # MySQL Connection
+        conn = mysql.connector.connect(user='menui', password='0000', 
+                                       host='localhost', database='menui',
+                                       port='3306')
+        
+        # Connection으로부터 Cursor 생성
+        cur = conn.cursor()
+        
+        # menu table에서 음식(join_str) 정보 가져오기
+        
+        # select language
+        lang = 'eng'
+        
+        # 선택된 언어에 대한 이름과 재료 정보 가져옴
+        cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_kor='{join_str}'")
+        
+        # 결과값 전부 가져오기
+        rows = cur.fetchall()
+        # print(rows)
+        
+        # 두 결과값에 대한 변수 할당, 0번 자리에 튜플로 되어있음
+        sql_menu_name = rows[0][0]
+        sql_menu_info = rows[0][1]
+        
+        
+        # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함
+        # 메뉴판에서 여러 음식에 대한 정보를 가져오게 될 경우 방법을 수정
+        # for문 이용해야할 것
+
 
         return render(request, 'result.html', 
-                      {'join_str': join_str, 'translated_text': translated_text})
+                      {'join_str': join_str, 'translated_text': translated_text,
+                       'sql_menu_name': sql_menu_name, 'sql_menu_info': sql_menu_info})
                     # join_str과 translated_text를 dict 형태로 result.html로 return
                     # 추가 변수를 return할 때 뒤에 key, value 형식으로 추가하면 됨
     else:
