@@ -1,0 +1,81 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../static/sign-in-css/sign-in.css">
+
+    
+</head>
+<body>
+        <form method="post" action="{% url 'common:login' %}">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">  <!-- 로그인 성공후 이동되는 URL -->
+            {% comment %} {% include "form_errors.html" %}  {% endcomment %} <!--팝업창으로변경 -->
+        <div class="wrap">
+        <div class="login">
+            <h2>Log-in</h2>
+            <div class="login_sns">
+            <!-- <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fab fa-twitter"></i></a></li> -->
+            </div>
+            <div class="login_id">
+                <h4>사용자ID</h4>
+                <input type="text" name="username" id="username" placeholder="username"
+                value="{{ form.username.value|default_if_none:'' }}">
+            </div>
+            <div class="login_pw">
+                <h4>Password</h4>
+                <input type="password" name="password" id="password" placeholder="Password"
+                value="{{ form.password.value|default_if_none:'' }}">
+            </div>
+            <div class="submit">
+                <input type="submit" value="login">
+            </div>
+
+            <div class="button">
+                <input type="button" class="button" id="signup" value="Sign up" onclick="location.href='{% url 'common:signup' %}'">
+
+            </div>
+            <!-- 모달 팝업창 추가함 -->
+            <div id="error-modal" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                    {% for field in form %}
+                    {% if field.errors %}
+                    <div>
+                        <strong>{{ field.label }}</strong>
+                        {{ field.errors }}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                    <div>
+                        <strong>{{ error }}</strong>
+                    </div>
+                    {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
+
+
+<!-- 모달 팝업 구동하기위해서 사용하는 JavaScript 코드 추가함.-->
+{% block scripts %}
+<script src="{% static 'static\error\error.js' %}"></script>
+{% endblock %}
+
