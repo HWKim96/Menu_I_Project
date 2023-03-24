@@ -59,7 +59,7 @@ def upload(request):
         # result 안에 message 객체 안 result 객체 안 translatedText (결과) 가져옴
 
         return render(request, 'result.html', 
-                      {'join_str': join_str, 'translated_text': translated_text})
+                    {'join_str': join_str, 'translated_text': translated_text})
                     # join_str과 translated_text를 dict 형태로 result.html로 return
                     # 추가 변수를 return할 때 뒤에 key, value 형식으로 추가하면 됨
     else:
