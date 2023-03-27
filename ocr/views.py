@@ -95,6 +95,7 @@ def upload(request):
         except:
             sql_menu_name = None
             sql_menu_info = None
+            # 만약 SQL에 DB가 없어 에러가 발생했을 경우에 예외처리를 통해 None 할당
         
         
         # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함

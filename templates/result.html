@@ -12,6 +12,7 @@
 		{% if sql_menu_name and sql_menu_info %}
 			<p>Menu Name: {{ sql_menu_name }}</p>
 			<p>Menu Ingredients: {{ sql_menu_info }}</p>
+			{% comment %} sql 데이터가 있는 경우에만 출력 {% endcomment %}
 		{% endif %}
 		{% comment %} result 변수를 가져옴 {% endcomment %}
 	{% else %}
