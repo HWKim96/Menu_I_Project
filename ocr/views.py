@@ -104,8 +104,6 @@ def upload(request):
         
         
         # menu table에서 음식(join_str) 정보 가져오기
-        # select language
-        lang = 'jpn'
         
         
         # 만약 MySQL에서 정보가 있다면 DB에서 가져오고 없다면 except를 통해 예외처리
