@@ -6,7 +6,9 @@ import numpy as np
 import requests
 import json
 import mysql.connector
-
+from googleapiclient.discovery import build
+from google.oauth2 import service_account
+import re
 
 def upload(request):
     if request.method == 'POST':
@@ -30,11 +32,14 @@ def upload(request):
         # item.0은 텍스트 좌표, item.1은 출력 text, item.2는 신뢰도(정확도)
         
         join_str = ''.join(text)
-        print(join_str)
+        join_str = join_str.replace(' ', '')
+        print(join_str) # ocr 인식 결과
+        
+        #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
         # 번역 api 기능 추가
-        client_id = "ID"
-        client_secret = "PW"
+        client_id = "NkW4rbvtGrF5MVmXZxwI"
+        client_secret = "m72SSS_JtB"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
@@ -60,7 +65,29 @@ def upload(request):
         translated_text = result["message"]["result"]["translatedText"]
         # result 안에 message 객체 안 result 객체 안 translatedText (결과) 가져옴
         
+        # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
+        search_engine_id = '823d1386e3906483b'
+        api_key = 'AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM'
+        query = join_str
+        url_pattern = re.compile(r'.+\.jpg$')
+        query_url = f'https://www.googleapis.com/customsearch/v1?key={"AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM"}&cx={"823d1386e3906483b"}&q={query}&searchType=image'
+        img_response = requests.get(query_url).json()
         
+        image_links = []
+        error_message = ""
+        try:
+            for item in img_response['items']:
+                image_link = item['link']
+                if url_pattern.match(image_link):
+                    image_links.append(image_link)
+                if len(image_links) >= 3:
+                    break
+        except KeyError:
+            error_message = "Google doesn't have an image. There is a possibility that the character recognition is incorrect. Please take a picture again."
+                
+
+        print(image_links)
+        # ---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         # MySQL에서 DB 정보 가져오기
         
         # MySQL Connection
@@ -102,7 +129,7 @@ def upload(request):
 
         return render(request, 'result.html', 
                     {'join_str': join_str, 'translated_text': translated_text,
-                    'sql_menu_name': sql_menu_name, 'sql_menu_info': sql_menu_info})
+                    'sql_menu_name': sql_menu_name, 'sql_menu_info': sql_menu_info, 'image_links': image_links, 'error_message': error_message})
                     # join_str과 translated_text를 dict 형태로 result.html로 return
                     # 추가 변수를 return할 때 뒤에 key, value 형식으로 추가하면 됨
     else:
