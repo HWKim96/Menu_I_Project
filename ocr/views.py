@@ -21,7 +21,7 @@ def upload(request):
         # easyocr 라이브러리
         reader = easyocr.Reader(['ko'])
         ocr = reader.readtext(img_np)
-        
+        # print(ocr)
         # 문자열 병합과정 여러개로 떨어진 하나의 음식 음절을 붙이는 과정
         text = []
         for i in range(len(ocr)):
@@ -39,7 +39,11 @@ def upload(request):
         # Naver Developers에서 papago api를 불러와 사용하기
         
         source = "ko"  # 번역할 언어
-        target = "en"  # 번역 결과 언어, 현재는 영어 선택이지만 차후 연동할 것
+        # 번역할 파파고 언어: ko(한국어), en(영어), ja(일본어), zh-CN(중국어-간체))
+        target = "ja" 
+        # 가져올 SQL 언어: ko(한국어), en(영어), ja(일본어), cn(중국어)
+        lang = 'ja'
+        
         
         headers = {
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -71,16 +75,14 @@ def upload(request):
         # Connection으로부터 Cursor 생성
         cur = conn.cursor()
         
+        
         # menu table에서 음식(join_str) 정보 가져오기
-        
-        # select language
-        lang = 'eng'
-        
         
         # 만약 MySQL에서 정보가 있다면 DB에서 가져오고 없다면 except를 통해 예외처리
         try:
             # 선택된 언어에 대한 이름과 재료 정보 가져옴
-            cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_kor='{join_str}'")
+            # lang은 번역 api 추가하는 부분에서 변수 할당함 line.45
+            cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_ko='{join_str}'")
 
             # 결과값 전부 가져오기
             rows = cur.fetchall()
@@ -91,8 +93,9 @@ def upload(request):
             sql_menu_info = rows[0][1]
         
         except:
-            sql_menu_name = "There is no information for this menu.\n I'm sorry for the inconvenience.\n I will fix it through an update later."
+            sql_menu_name = None
             sql_menu_info = None
+            # 만약 SQL에 DB가 없어 에러가 발생했을 경우에 예외처리를 통해 None 할당
         
         
         # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함
