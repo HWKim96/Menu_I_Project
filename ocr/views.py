@@ -38,8 +38,8 @@ def upload(request):
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
         # 번역 api 기능 추가
-        client_id = "NkW4rbvtGrF5MVmXZxwI"
-        client_secret = "m72SSS_JtB"
+        client_id = "id"
+        client_secret = "pw"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
@@ -70,8 +70,8 @@ def upload(request):
         # result 안에 message 객체 안 result 객체 안 translatedText (결과) 가져옴
         print(translated_text)
         # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
-        search_engine_id = '823d1386e3906483b'
-        api_key = 'AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM'
+        search_engine_id = 'id'
+        api_key = 'key'
         query = join_str
         url_pattern = re.compile(r'.+\.jpg$')
         query_url = f'https://www.googleapis.com/customsearch/v1?key={"AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM"}&cx={"823d1386e3906483b"}&q={query}&searchType=image'
