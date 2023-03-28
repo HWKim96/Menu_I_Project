@@ -51,6 +51,11 @@
       -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
     }
+    h1 {
+      margin-top: 50px; /* 아래로 내리기 */
+      text-align: center; /* 가운데 정렬 */
+    }
+    
   </style>
 
 
@@ -66,7 +71,13 @@
 
 <body>
 
+<!-- Header -->
+<header id="header">
+  <h1><a class="text-center mb-5 text-white" href="{% url 'home' %}">Menu 'I'</a></h1>
 
+  <nav class="main">
+  </nav>
+</header>
 
 
 
@@ -138,7 +149,7 @@
             </div>
           </div>
           
-          <div class="row">
+          
           <div class="mb-3">
             <label for="address">주소</label>
             <input type="text" class="form-control" id="address" name="address" 
@@ -148,8 +159,8 @@
               주소를 입력해주세요.
             </div>
           </div>
-          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="openDaumAddressPopup()">주소 검색</button>
-        </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="openDaumAddressPopup()">주소 검색</button><br>
+        
 
           <div class="mb-3">
             <label for="detail_address">상세주소</label>

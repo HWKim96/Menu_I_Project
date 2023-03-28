@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Future Imperfect by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../static/total_result_window/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">Menu 'I'</a></h1>
+
+						<nav class="main">
+							<ul>
+
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+									<!-- 혹시나 히스토리 구현하려고 하면 필요할수도 -->
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>History</h3>
+											<p>혹시나 구현이 된다면</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+					</section>
+					<div id="main">
+						<div class="post-wrapper">
+							<article class="post">
+							<header>
+								<div class="title">
+								<h2><a href="#">Result Window</a></h2>
+								{% if join_str %} 
+									{% comment %} join_str 변수에 값이 있으면 {% endcomment %}
+										<p>Original Text: {{ join_str }}</p>
+										<p>Translated Text: {{ translated_text }}</p>
+										{% if sql_menu_name and sql_menu_info %}
+											<p>Menu Name: {{ sql_menu_name }}</p>
+											<p>Menu Ingredients: {{ sql_menu_info }}</p>
+											{% comment %} sql 데이터가 있는 경우에만 출력 {% endcomment %}
+										{% endif %}
+										{% comment %} result 변수를 가져옴 {% endcomment %}
+									{% else %}
+										<p>Sorry. Please take a picture again.</p>
+									{% endif %}
+								</div>
+							</header>
+							<div class="image-container">
+
+								{% if error_message %}
+								<p>image: {{ error_message }}</p>
+								{% else %}
+									{% for link in image_links %}
+									<a class="image featured"><img src="{{ link }}" style="width: 700px; height: 600px;" alt="1" /></a>
+									{% endfor %}
+								{% endif %}
+								
+							</div>
+
+							<footer>
+								<ul class="actions">
+									<li><a href="https://www.google.com/search?q={{ translated_text }}" class="button large" target="_blank">정보 더보기란</a></li>
+									<!--<li><a href="https://www.google.com/search?q={{ join_str }}" class="button large">정보 더보기란</a></li>(현재페이지에서 열리기 위에 코드는 새로운 페이지에서 열리는거)-->
+
+								</ul>
+							</footer>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+	</section>
+</div>
+
+		<!-- Scripts -->
+			<script src="../static/total_result_window/assets/js/jquery.min.js"></script>
+			<script src="../static/total_result_window/assets/js/browser.min.js"></script>
+			<script src="../static/total_result_window/assets/js/breakpoints.min.js"></script>
+			<script src="../static/total_result_window/assets/js/util.js"></script>
+			<script src="../static/total_result_window/assets/js/main.js"></script>
+
+	</body>
+</html>
