@@ -6,7 +6,7 @@ import numpy as np
 import requests
 import json
 import mysql.connector
-from googleapiclient.discovery import build
+# from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import re
 
@@ -25,27 +25,34 @@ def upload(request):
         ocr = reader.readtext(img_np)
         # print(ocr)
         # 문자열 병합과정 여러개로 떨어진 하나의 음식 음절을 붙이는 과정
-        text = []
+        
+        text = [] # text가 인식된 언어들 묶여있음 ex)['군고구마', '1개', '1900원', '1봉지3개) 5000원'] 대체로 언어들도 잘 인식함
         for i in range(len(ocr)):
             text.append(ocr[i][1])
         # item 변수의 두번째 요소 출력 
         # item.0은 텍스트 좌표, item.1은 출력 text, item.2는 신뢰도(정확도)
-        
-        join_str = ''.join(text)
-        join_str = join_str.replace(' ', '')
+        pattern = re.compile(r'^[가-힣\s]+$') #글자와 공백으로만 구성된 요소가 나오게 정규식 작성
+        text_str = [item for item in text if pattern.match(item)]
+        # join_str = ''.join(text_str) #text 리스트안의 요소를 하나로 합치고 리스트한에 있지도 않고 그냥 str나옴
+        # join_str = text_str[0] # 테스트용
+        join_str = text_str # 테스트용
+        # join_str = join_str.replace(' ', '') #리스트로 묶이면 공백 제거 안됨 포문 돌려서 공백 제거하자
+        join_str = [item.replace(' ', '') for item in join_str] # 공백 제거 코드
         print(join_str) # ocr 인식 결과
         
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
         # 번역 api 기능 추가
-        client_id = "id"
-        client_secret = "pw"
+        client_id = "NkW4rbvtGrF5MVmXZxwI"
+        client_secret = "m72SSS_JtB"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
         source = "ko"  # 번역할 언어
+        
         # 번역할 파파고 언어: ko(한국어), en(영어), ja(일본어), zh-CN(중국어-간체))
         target = "ja" 
+        
         # 가져올 SQL 언어: ko(한국어), en(영어), ja(일본어), cn(중국어)
         lang = 'ja'
         
@@ -68,12 +75,46 @@ def upload(request):
         # print(result)
         translated_text = result["message"]["result"]["translatedText"]
         # result 안에 message 객체 안 result 객체 안 translatedText (결과) 가져옴
+        translated_text = translated_text.replace('、', ',')
+        translated_text = translated_text.split(",")
         print(translated_text)
         # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
-        search_engine_id = 'id'
-        api_key = 'key'
-        query = join_str
+        search_engine_id = '823d1386e3906483b'
+        api_key = 'AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM'
+        queries = join_str
+        
         url_pattern = re.compile(r'.+\.jpg$')
+        image_links = []
+        image_link = []
+        
+
+    error_message = None
+    for query in queries:
+        query_url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}&searchType=image'
+        img_response = requests.get(query_url).json()
+
+        
+        query_image_links = []
+        try:
+            for item in img_response['items']:
+                image_link = item['link']
+                if url_pattern.match(image_link):
+                    query_image_links.append(image_link)
+                if len(query_image_links) >= 3:
+                    break
+            else:  # for문이 끝까지 돌았을 때 실행되는 코드
+                if query_image_links:  # query_image_links에 이미지 링크가 하나 이상 있으면
+                    image_links.extend(query_image_links)  # image_links에 전체 추가
+        except KeyError:
+                error_message = "Google doesn't have an image. There is a possibility that the character recognition is incorrect. Please take a picture again."
+                
+        image_links = query_image_links
+        print(image_link)
+        print(query_image_links)
+    #        image_links.extend(query_image_links)
+    #        print(image_links)
+        
+        '''url_pattern = re.compile(r'.+\.jpg$')
         query_url = f'https://www.googleapis.com/customsearch/v1?key={"AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM"}&cx={"823d1386e3906483b"}&q={query}&searchType=image'
         img_response = requests.get(query_url).json()
         
@@ -90,7 +131,7 @@ def upload(request):
             error_message = "Google doesn't have an image. There is a possibility that the character recognition is incorrect. Please take a picture again."
                 
 
-        print(image_links)
+        print(image_links)'''
         # ---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         # MySQL에서 DB 정보 가져오기
         
@@ -129,11 +170,11 @@ def upload(request):
         # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함
         # 메뉴판에서 여러 음식에 대한 정보를 가져오게 될 경우 방법을 수정
         # for문 이용해야할 것
-
-
+        zip_result = list(zip(join_str, translated_text))
+        
         return render(request, 'ocr/result.html', 
                     {'join_str': join_str, 'translated_text': translated_text,
-                    'sql_menu_name': sql_menu_name, 'sql_menu_info': sql_menu_info, 'image_links': image_links, 'error_message': error_message})
+                    'sql_menu_name': sql_menu_name, 'sql_menu_info': sql_menu_info, 'image_links': image_links, 'error_message': error_message, 'zip_result': zip_result})
                     # join_str과 translated_text를 dict 형태로 result.html로 return
                     # 추가 변수를 return할 때 뒤에 key, value 형식으로 추가하면 됨
     else:
