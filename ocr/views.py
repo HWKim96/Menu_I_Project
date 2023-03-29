@@ -79,8 +79,8 @@ def upload(request):
         translated_text = translated_text.split(",")
         print(translated_text)
         # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
-        search_engine_id = '823d1386e3906483b'
-        api_key = 'AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM'
+        search_engine_id = 'id'
+        api_key = 'key'
         queries = join_str
         
         url_pattern = re.compile(r'.+\.jpg$')
