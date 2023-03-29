@@ -43,8 +43,8 @@ def upload(request):
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
         # 번역 api 기능 추가
-        client_id = "NkW4rbvtGrF5MVmXZxwI"
-        client_secret = "m72SSS_JtB"
+        client_id = "id"
+        client_secret = "pw"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
