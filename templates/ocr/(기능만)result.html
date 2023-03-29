@@ -5,6 +5,9 @@
 </head>
 <body>
 	<h2>OCR Result</h2>
+	{% comment %} {% if error_message %}
+    <p>image: {{ error_message }}</p>
+	{% else %} {% endcomment %}
 	{% if join_str %} 
 	{% comment %} join_str 변수에 값이 있으면 {% endcomment %}
 		<p>Original Text: {{ join_str }}</p>
@@ -19,5 +22,13 @@
 		<p>Sorry. Please take a picture again.</p>
 	{% endif %}
 	{% comment %} endfor, endif는 반복문, 조건문 끝을 나타냄 {% endcomment %}
+
+	{% if error_message %}
+    <p>image: {{ error_message }}</p>
+	{% else %}
+		{% for link in image_links %}
+			<img src="{{ link }}" style="width: 500px; height: 300px;">
+		{% endfor %}
+	{% endif %}
 </body>
 </html>

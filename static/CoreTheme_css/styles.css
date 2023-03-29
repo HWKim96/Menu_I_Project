@@ -2426,6 +2426,7 @@ textarea.form-control-lg {
      -moz-appearance: none;
           appearance: none;
 }
+
 @media (prefers-reduced-motion: reduce) {
   .form-select {
     transition: none;

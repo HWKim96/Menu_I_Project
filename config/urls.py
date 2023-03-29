@@ -18,6 +18,7 @@ from django.urls import path, include
 from pybo.views import base_views
 from django.views.generic.base import TemplateView
 from ocr.views import upload
+from ocr import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +27,6 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')), # pybo/로 시작되는 페이지 요청은 모두 pybp/urls.py 파일에 있는 url매핑을 쓰란 말
     #path('pybo/', base_views.index, name='index'),  # '/' 에 해당되는 path /
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
-    path('upload/', upload, name='upload'),
+    path('upload/', views.upload, name='upload'),
     
 ]
