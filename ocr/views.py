@@ -115,7 +115,7 @@ def upload(request):
     #        print(image_links)
         
         '''url_pattern = re.compile(r'.+\.jpg$')
-        query_url = f'https://www.googleapis.com/customsearch/v1?key={"AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM"}&cx={"823d1386e3906483b"}&q={query}&searchType=image'
+        query_url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={id}&q={query}&searchType=image'
         img_response = requests.get(query_url).json()
         
         image_links = []
