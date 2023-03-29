@@ -541,11 +541,11 @@
                         </form>
                       </div> -->
 
-                      <div class="text-center" style="width: 300px;margin:0 auto;">
+                      <div class="text-center" style="width: 300px; margin:0 auto;">
                         <form action="{% url 'upload' %}" method="POST">
                           {% csrf_token %}
                           <div class="input-group">
-                            <select id="language" name="language" class="form-select">
+                            <select id="language" name="language" class="form-select" style="margin-bottom: 5px; text-align: center;">
                               <option value="en">English</option>
                               <option value="ja">日本語</option>
                               <option value="cn">中文</option>
