@@ -1,0 +1,7 @@
+1. image 폴더에 인식할 이미지를 위치합니다.
+2. model_list에 사용할 모델을 저장합니다.
+2. detectandcrop.py를 실행합니다.
+ >> detect 후 crop된 이미지가 crop폴더 밑에 저장 됩니다.
+3. textrecogforvgg.py 또는 textrecogforresnet.py를 실행합니다.
+ 3_1. textrecogforvgg 는 TPS-VGG-BiLSTM-Attn을 사용하는 모델, textrecogforresnet 는 TPS-ResNet-BiLSTM-Attn을 사용하는 모델을 위한 파이썬 파일입니다. (참고로 model_list에 각각의 모델을 위한 best_accuracy_VGG.pth, best_accuracy_ResNet.pth 파일이 위치해야 합니다.)
+ >> crop된 이미지에 대한 인식 결과가 label_list라는 변수에 저장됩니다.

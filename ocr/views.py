@@ -1,5 +1,9 @@
+import os
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.conf import settings
 from PIL import Image
 import easyocr
 import numpy as np
@@ -9,6 +13,19 @@ import mysql.connector
 # from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import re
+
+
+@csrf_exempt
+def save_image(request):
+    if request.method == 'POST' and request.FILES.get('image'):
+        image_file = request.FILES['image']
+        image_path = os.path.join(settings.MEDIA_ROOT, 'test.jpg')
+        with open(image_path, 'wb') as f:
+            f.write(image_file.read())
+        return JsonResponse({'status': 'success'})
+    else:
+        return JsonResponse({'status': 'error'})
+
 
 def upload(request):
     if request.method == 'POST':
@@ -43,8 +60,8 @@ def upload(request):
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
         # 번역 api 기능 추가
-        client_id = "papago"
-        client_secret = "papago"
+        client_id = "lOWrKxC0PtfMDLzf2gn9"
+        client_secret = "q8xSULcjGf"
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
@@ -88,13 +105,11 @@ def upload(request):
         translated_text = translated_text.split(",")
         # print(translated_text)
         # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
-        search_engine_id = 'google' 
-        api_key = 'google'
+        search_engine_id = '24ce2daf3f88f4e84' 
+        api_key = 'AIzaSyC0DFUDjvvzCNnaPY_FXpBXmo_vqaVdRQs'
         join_str
         
         url_pattern = re.compile(r'.+\.jpg$')
-
-        error_message = None
         
         # MySQL에서 DB 정보 가져오기
         
@@ -109,6 +124,7 @@ def upload(request):
         sql_name_list = []
         sql_info_list = []
         images_link = []
+        error_message = None
     
         for text in join_str:
             # SQL 정보 가져오기
@@ -140,14 +156,14 @@ def upload(request):
             img_response = requests.get(query_url).json()
             
             try:
-                # json은 딕셔너리의 형태를 가지고 있음 img_response의 keys 중 items의 요소 내에서
-                # item['link'] keys의 대한 value가 image_link에 해당함
                 items_list = img_response['items']
                 img_links = [item['link'] for item in items_list if url_pattern.match(item['link'])][:3]
-                images_link.append(img_links)
-                
             except KeyError:
                 error_message = f'{text}에 해당하는 링크를 찾지 못했습니다.'
+                print(error_message)
+                img_links = []
+
+            images_link.append(img_links)
             
             sql_name_list.append(sql_menu_name)
             sql_info_list.append(sql_menu_info)

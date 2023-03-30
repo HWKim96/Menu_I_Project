@@ -62,15 +62,14 @@
 										</div>
 									</header>
 									<div class="image-container">
-
-										{% if error_message %}
-										<p>image: {{ error_message }}</p>
-										{% else %}
-											{% for link in image_links %}
+										{% if image_links %}
+										  {% for link in image_links %}
 											<a class="image featured"><img src="{{ link }}" style="width: 700px; height: 600px;" alt="1" /></a>
-											{% endfor %}
+										  {% endfor %}
+										{% else %}
+										  <p>해당 음식의 이미지를 찾을 수 없습니다.</p>
 										{% endif %}
-									</div>
+									  </div>
 									<footer>
 										<ul class="actions">
 										   <li><a href="https://www.google.com/search?q={{ trans_text }}" class="button large" target="_blank">More Infomation</a></li>
