@@ -6,11 +6,18 @@ import torch
 import torch.backends.cudnn as cudnn
 import torch.utils.data
 import torch.nn.functional as F
-
+import re
 import sys
+import os
 
 #모듈 import 위한 경로 추가
-sys.path.append('E:\DL_proj_2jo\code\CRAFT-pytorch-master\CRAFT-pytorch-master')
+# sys.path.append('E:\DL_proj_2jo\code\CRAFT-pytorch-master\CRAFT-pytorch-master')
+# 모듈 경로 추가
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.join(BASE_DIR, 'ocr'))
+
+# from ocr.ctpn.lib.utils import draw_boxes, get_boxes, adjust_result_coordinates
+# from ocr.ctpn.lib.fast_rcnn.config import cfg_from_file
 
 
 from utils import CTCLabelConverter, AttnLabelConverter
@@ -21,11 +28,11 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-#예측한 텍스트를 담아 둘 list 생성
-label_list=[]
-
 def recog(opt):
     """ model configuration """
+    
+    label_list = []
+    
     if 'CTC' in opt.Prediction:
         converter = CTCLabelConverter(opt.character)
     else:
@@ -35,13 +42,13 @@ def recog(opt):
     if opt.rgb:
         opt.input_channel = 3
     model = Model(opt)
-    print('model input parameters', opt.imgH, opt.imgW, opt.num_fiducial, opt.input_channel, opt.output_channel,
-          opt.hidden_size, opt.num_class, opt.batch_max_length, opt.Transformation, opt.FeatureExtraction,
-          opt.SequenceModeling, opt.Prediction)
+    # print('model input parameters', opt.imgH, opt.imgW, opt.num_fiducial, opt.input_channel, opt.output_channel,
+    #       opt.hidden_size, opt.num_class, opt.batch_max_length, opt.Transformation, opt.FeatureExtraction,
+    #       opt.SequenceModeling, opt.Prediction)
     model = torch.nn.DataParallel(model).to(device)
 
     # load model
-    print('loading pretrained model from %s' % opt.saved_model)
+    # print('loading pretrained model from %s' % opt.saved_model)
     model.load_state_dict(torch.load(opt.saved_model, map_location=device))
 
     # prepare data. two demo images from https://github.com/bgshih/crnn#run-demo
@@ -52,9 +59,10 @@ def recog(opt):
         shuffle=False,
         num_workers=int(opt.workers),
         collate_fn=AlignCollate_demo, pin_memory=True)
-
+    
     # predict
     model.eval()
+    log = open(f'./log_result.txt', 'a')
     with torch.no_grad():
         for image_tensors, image_path_list in demo_loader:
             batch_size = image_tensors.size(0)
@@ -79,34 +87,38 @@ def recog(opt):
                 _, preds_index = preds.max(2)
                 preds_str = converter.decode(preds_index, length_for_pred)
 
-
-            log = open(f'./log_result.txt', 'a')
-            dashed_line = '-' * 80
-            head = f'{"image_path":25s}\t{"predicted_labels":25s}\tconfidence score'
-            
-            print(f'{dashed_line}\n{head}\n{dashed_line}')
-            log.write(f'{dashed_line}\n{head}\n{dashed_line}\n')
-
             preds_prob = F.softmax(preds, dim=2)
             preds_max_prob, _ = preds_prob.max(dim=2)
-            
+
+            # save results
             for img_name, pred, pred_max_prob in zip(image_path_list, preds_str, preds_max_prob):
                 if 'Attn' in opt.Prediction:
                     pred_EOS = pred.find('[s]')
                     pred = pred[:pred_EOS]  # prune after "end of sentence" token ([s])
                     pred_max_prob = pred_max_prob[:pred_EOS]
 
-                # calculate confidence score (= multiply of pred_max_prob)
+                # calculate confidence score
                 confidence_score = pred_max_prob.cumprod(dim=0)[-1]
-
-                print(f'{img_name:25s}\t{pred:25s}\t{confidence_score:0.4f}')
-                log.write(f'{img_name:25s}\t{pred:25s}\t{confidence_score:0.4f}\n')
                 label_list.append(pred)
-            log.close()
 
+                # print(f'{img_name:25s}\t{pred:25s}\t{confidence_score:0.4f}')
+                log.write(f'{img_name:25s}\t{pred:25s}\t{confidence_score:0.4f}\n')
+                
+        log.close()
+
+    label_list = [label.replace(" ", "") for label in label_list]
     
+    new_label_list = []
+    
+    new_label_list = []
+    for label in label_list:
+        # 숫자, 알파벳, 기호가 조합된 원소 제외
+        if re.match('^[a-zA-Z0-9.,!?]+$', label):
+            continue
+        new_label_list.append(label)
 
-            
+    return new_label_list
+
 #모델 선택
 #opt 설정 argparse 대신 easydict를 사용합니다.
 if __name__ == '__main__':
@@ -141,10 +153,3 @@ if __name__ == '__main__':
     cudnn.benchmark = True
     cudnn.deterministic = True
     opt.num_gpu = torch.cuda.device_count()
-
-    recog(opt)
-    label_list = [label.replace(" ", "") for label in label_list]
-    print(label_list)
-    
-    #label_list라는 변수에 predict한 텍스트를 담았습니다.
-    

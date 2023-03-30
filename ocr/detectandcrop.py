@@ -184,9 +184,37 @@ for k, image_path in enumerate(image_list):
 
 
 #여기서부터 bboxes의 좌표대로 Image를 crop합니다
+bboxes = bboxes.astype(int) #bboxes 정수화
+#bbox를 왼쪽 위 x,y랑 오른쪽아래 x,y로 나타내기
+bbox_list = []
+for bbox in bboxes:
+    x_min, y_min = bbox.min(axis=0)
+    x_max, y_max = bbox.max(axis=0)
+    bbox_list.append([x_min, y_min, x_max, y_max])
 
-# 위의 bboxes 리스트를 float 타입으로 변환하여 다시 할당
-bboxes = [[[float(y) for y in x] for x in box] for box in bboxes]
+#비슷한 높이에 있는 bbox 하나의 bbox로 묶어주기
+merged_bboxes = []
+
+# 두 번째 요소를 기준으로 정렬
+sorted_bboxes = sorted(bbox_list, key=lambda bbox: bbox[1])
+
+for bbox in sorted_bboxes:
+    if len(merged_bboxes) == 0:
+        # merged_bboxes가 비어있을 경우, 새로운 바운딩 박스 추가
+        merged_bboxes.append(bbox)
+    else:
+        # 새로운 바운딩 박스와 기존 바운딩 박스의 왼쪽 위의 y좌표가 조정범위 내에 들어오는 경우, 합치기
+        bbox_height = bbox[3] - bbox[1] # 바운딩 박스 높이 계산
+        adjust_range = int(bbox_height * 0.3) # 높이의 0.3를 조정 범위로 설정
+        if bbox[1] <= merged_bboxes[-1][1] + adjust_range:
+            merged_bboxes[-1] = [min(merged_bboxes[-1][0], bbox[0]), 
+                                 min(merged_bboxes[-1][1], bbox[1]), 
+                                 max(merged_bboxes[-1][2], bbox[2]), 
+                                 max(merged_bboxes[-1][3], bbox[3])]
+        else:
+            # 겹치지 않는 경우, 새로운 바운딩 박스 추가
+            merged_bboxes.append(bbox)
+
 
 # test_folder 내의 이미지 파일명을 읽어옵니다.
 img_filename = [f for f in os.listdir(test_folder) if f.endswith('.jpg') or f.endswith('.png')][0]
@@ -194,15 +222,11 @@ img_filename = [f for f in os.listdir(test_folder) if f.endswith('.jpg') or f.en
 # img를 지정합니다.
 img = Image.open(os.path.join(test_folder, img_filename))
 
-# 각 bbox를 다각형으로 표시하고 내부를 crop하여 저장
-for i, bbox in enumerate(bboxes):
+# bbox를 순회하며 crop 및 저장
+for i, bbox in enumerate(merged_bboxes):
     # bbox 좌표를 정수형으로 변환
-    bbox = np.round(bbox).astype(np.int32)
 
     # bbox 내부를 crop하여 저장
-    x_min, y_min = np.min(bbox, axis=0)
-    x_max, y_max = np.max(bbox, axis=0)
-    img_cropped = img.crop((x_min, y_min, x_max, y_max))
-    img_cropped.save(f'crop/cropped_{i}.png') #crop 폴더 이하에 crop 결과를 저장합니다.
-    
-    
+    x1, y1, x2, y2 = bbox
+    img_cropped = img.crop((x1,y1,x2,y2))
+    img_cropped.save(f'crop/cropped_{i}.png')   

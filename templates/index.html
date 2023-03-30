@@ -515,7 +515,7 @@
                 <!-- 이미지 업로드 POST -->
                 <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-
+                
                     <!-- 이미지 드랍존 (이미지 Drag N Drop 영역) -->
                     <div class="parent">
                         <div id="dropzone" class="dropzone-center">
@@ -523,20 +523,24 @@
                             <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
                         </div>
                     </div>
-
-                    <div class="text-center" style="width: 300px; margin:0 auto;">
-                        <div class="input-group">
-                            <select id="language" name="language" class="form-select" style="margin-bottom: 5px; text-align: center;">
-                                <option value="en">English</option>
-                                <option value="ja">日本語</option>
-                                <option value="cn">中文</option>
-                            </select>
-                        </div>
-
-                        <button type="button" id="save-button" class="btn btn-primary btn-xl text-uppercase" style="width:145px; display:none;">Save</button>
-                        <button type="submit" class="btn btn-primary btn-xl text-uppercase" style="width:145px;">Submit</button>
-                        <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
+                    <div class="input-group" style="width: 400px; margin:0 auto;">
+                        <select id="language" name="language" class="form-select mb-3" style="margin-bottom: 5px; text-align: center;">
+                            <option value="en">English</option>
+                            <option value="ja">日本語</option>
+                            <option value="cn">中文</option>
+                        </select>
                     </div>
+                    <div class="row justify-content-center" style="width: 900px; margin:0 auto;">
+                        <div class="col-md-3">
+                            <button type="button" id="save-button" class="btn btn-primary btn-xl text-uppercase w-100">Detect</button>
+                          </div>
+                          <div class="col-md-3">
+                            <button type="submit" id="submit-button" class="btn btn-primary btn-xl text-uppercase w-100">Submit</button>
+                          </div>
+                          <div class="col-md-3">
+                            <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase w-100">Reset</button>
+                          </div>
+                    </div>                    
                 </form>
 
 
@@ -545,6 +549,7 @@
                     const dropzone = document.getElementById('dropzone');
                     const imageInput = document.getElementById('image-input');
                     const saveButton = document.getElementById('save-button');
+                    const detectButton = document.getElementById('detect-button');
                     const form = document.querySelector('form');
                 
                     dropzone.addEventListener('dragover', e => {
@@ -602,6 +607,58 @@
                             console.log(data);
                         });
                     });
+                    detectButton.addEventListener('click', () => {
+                        const formData = new FormData(form);
+                        formData.append('image', imageInput.files[0]);
+                        fetch('/detect-crop-button/', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                    });
+
+
+                    function sendPostRequest() {
+                        var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+                        var form_data = new FormData();
+                        form_data.append("csrfmiddlewaretoken", csrf_token);
+                        $.ajax({
+                            url: "{% url 'detect' %}",
+                            type: "POST",
+                            data: form_data,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                console.log(response);
+                            },
+                            error: function(xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                    };
+                    
+                    {% comment %} function runOCR() {
+                        var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+                        var form_data = new FormData();
+                        form_data.append("csrfmiddlewaretoken", csrf_token);
+                        $.ajax({
+                            url: "{% url 'run_ocr' %}",
+                            type: "POST",
+                            data: form_data,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                console.log(response);
+                            },
+                            error: function(xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                    }; {% endcomment %}
+
                 </script>
                 <!-- Drag N Drop Script End -->
 
@@ -629,14 +686,6 @@
                 </div>
             </div>
         </footer>
-
-
-
-
-
-
-
-
 
 
         <!-- Portfolio Modals-->
