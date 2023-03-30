@@ -43,8 +43,10 @@ def upload(request):
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
         # 번역 api 기능 추가
+
         client_id = "NkW4rbvtGrF5MVmXZxwI"
         client_secret = "m72SSS_JtB"
+
         url = "https://openapi.naver.com/v1/papago/n2mt"
         # Naver Developers에서 papago api를 불러와 사용하기
         
@@ -88,9 +90,10 @@ def upload(request):
         translated_text = translated_text.split(",")
         # print(translated_text)
         # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
         search_engine_id = '24ce2daf3f88f4e84' 
         api_key = 'AIzaSyAjJPW-7MQO3mou1wQ_xfmsfQaUTZ-PB0M'
-        join_str
+
         
         url_pattern = re.compile(r'.+\.jpg$')
 
