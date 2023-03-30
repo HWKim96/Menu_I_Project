@@ -43,18 +43,18 @@
 
 					</section>
 					<div id="main">
-						{% for item, translated in zip_result %}
+						{% for text, trans_text, sql_name, sql_info, image_links in zip_result %}
 							<div class="post-wrapper">
 								<article class="post">
 									<header>
 										<div class="title">
 											<h2><a href="#">Result Window</a></h2>
-											{% if item %}
-												<p>Original Text: {{ item }}</p>
-												<p>Translated Text: {{ translated }}</p>
-												{% if sql_menu_name and sql_menu_info %}
-													<p>Menu Name: {{ sql_menu_name }}</p>
-													<p>Menu Ingredients: {{ sql_menu_info }}</p>
+											{% if text %}
+												<p>Original Text: {{ text }}</p>
+												<p>Translated Text: {{ trans_text }}</p>
+												{% if sql_name and sql_info %}
+													<p>Menu Name: {{ sql_name }}</p>
+													<p>Menu Ingredients: {{ sql_info }}</p>
 												{% endif %}
 											{% else %}
 												<p>Sorry. Please take a picture again.</p>
@@ -62,19 +62,20 @@
 										</div>
 									</header>
 									<div class="image-container">
+
 										{% if error_message %}
-											<p>image: {{ error_message }}</p>
+										<p>image: {{ error_message }}</p>
 										{% else %}
 											{% for link in image_links %}
-												<a class="image featured"><img src="{{ link }}" style="width: 700px; height: 600px;" alt="1" /></a>
+											<a class="image featured"><img src="{{ link }}" style="width: 700px; height: 600px;" alt="1" /></a>
 											{% endfor %}
 										{% endif %}
 									</div>
 									<footer>
 										<ul class="actions">
-											<li><a href="https://www.google.com/search?q={{ item }}" class="button large" target="_blank">정보 더보기란</a></li>
+										   <li><a href="https://www.google.com/search?q={{ trans_text }}" class="button large" target="_blank">More Infomation</a></li>
 										</ul>
-									</footer>
+									 </footer>
 								</article>
 							</div>
 						{% endfor %}

@@ -38,7 +38,7 @@ def upload(request):
         join_str = text_str # 테스트용
         # join_str = join_str.replace(' ', '') #리스트로 묶이면 공백 제거 안됨 포문 돌려서 공백 제거하자
         join_str = [item.replace(' ', '') for item in join_str] # 공백 제거 코드
-        print(join_str) # ocr 인식 결과
+        # print(join_str) # ocr 인식 결과
         
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         
@@ -51,11 +51,20 @@ def upload(request):
         source = "ko"  # 번역할 언어
         
         # 번역할 파파고 언어: ko(한국어), en(영어), ja(일본어), zh-CN(중국어-간체))
-        target = "ja" 
+        # target = "ja" 
         
         # 가져올 SQL 언어: ko(한국어), en(영어), ja(일본어), cn(중국어)
-        lang = 'ja'
-        
+        # lang = 'ja'
+        language = request.POST.get('language')
+        if language == 'en':
+            target = 'en'
+            lang = 'en'
+        elif language == 'ja':
+            target = 'ja'
+            lang = 'ja'
+        elif language == 'cn':
+            target = 'zh-CN'
+            lang = 'cn'
         
         headers = {
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -77,62 +86,16 @@ def upload(request):
         # result 안에 message 객체 안 result 객체 안 translatedText (결과) 가져옴
         translated_text = translated_text.replace('、', ',')
         translated_text = translated_text.split(",")
-        print(translated_text)
+        # print(translated_text)
         # --------------------------------------------------------------------------------------------------------------------------------------------------------------#
-        search_engine_id = '823d1386e3906483b'
-        api_key = 'AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM'
-        queries = join_str
+        search_engine_id = '24ce2daf3f88f4e84' 
+        api_key = 'AIzaSyAjJPW-7MQO3mou1wQ_xfmsfQaUTZ-PB0M'
+        join_str
         
         url_pattern = re.compile(r'.+\.jpg$')
-        image_links = []
-        image_link = []
-        
 
-    error_message = None
-    for query in queries:
-        query_url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={query}&searchType=image'
-        img_response = requests.get(query_url).json()
-
+        error_message = None
         
-        query_image_links = []
-        try:
-            for item in img_response['items']:
-                image_link = item['link']
-                if url_pattern.match(image_link):
-                    query_image_links.append(image_link)
-                if len(query_image_links) >= 3:
-                    break
-            else:  # for문이 끝까지 돌았을 때 실행되는 코드
-                if query_image_links:  # query_image_links에 이미지 링크가 하나 이상 있으면
-                    image_links.extend(query_image_links)  # image_links에 전체 추가
-        except KeyError:
-                error_message = "Google doesn't have an image. There is a possibility that the character recognition is incorrect. Please take a picture again."
-                
-        image_links = query_image_links
-        print(image_link)
-        print(query_image_links)
-    #        image_links.extend(query_image_links)
-    #        print(image_links)
-        
-        '''url_pattern = re.compile(r'.+\.jpg$')
-        query_url = f'https://www.googleapis.com/customsearch/v1?key={"AIzaSyC7_uu_Oo1YDBf7A5KreKuSmsIp57NnqJM"}&cx={"823d1386e3906483b"}&q={query}&searchType=image'
-        img_response = requests.get(query_url).json()
-        
-        image_links = []
-        error_message = ""
-        try:
-            for item in img_response['items']:
-                image_link = item['link']
-                if url_pattern.match(image_link):
-                    image_links.append(image_link)
-                if len(image_links) >= 3:
-                    break
-        except KeyError:
-            error_message = "Google doesn't have an image. There is a possibility that the character recognition is incorrect. Please take a picture again."
-                
-
-        print(image_links)'''
-        # ---------------------------------------------------------------------------------------------------------------------------------------------------------------#
         # MySQL에서 DB 정보 가져오기
         
         # MySQL Connection
@@ -143,38 +106,63 @@ def upload(request):
         # Connection으로부터 Cursor 생성
         cur = conn.cursor()
         
-        
-        # menu table에서 음식(join_str) 정보 가져오기
-        
-        
-        # 만약 MySQL에서 정보가 있다면 DB에서 가져오고 없다면 except를 통해 예외처리
-        try:
-            # 선택된 언어에 대한 이름과 재료 정보 가져옴
-            # lang은 번역 api 추가하는 부분에서 변수 할당함 line.45
-            cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_ko='{join_str}'")
+        sql_name_list = []
+        sql_info_list = []
+        images_link = []
+    
+        for text in join_str:
+            # SQL 정보 가져오기
+            # menu table에서 음식(join_str) 정보 가져오기   
+            # 만약 MySQL에서 정보가 있다면 DB에서 가져오고 없다면 except를 통해 예외처리
+            try:
+                # 선택된 언어에 대한 이름과 재료 정보 가져옴
+                # lang은 번역 api 추가하는 부분에서 변수 할당함 line.45
+                cur.execute(f"SELECT menu_name_{lang}, menu_explain_{lang} FROM menu WHERE menu_name_ko='{text}'")
+                # print(query)
 
-            # 결과값 전부 가져오기
-            rows = cur.fetchall()
-            # print(rows)
+                # 결과값 전부 가져오기
+                rows = cur.fetchall()
+                # print(rows)
 
-            # 두 결과값에 대한 변수 할당, 0번 자리에 튜플로 되어있음
-            sql_menu_name = rows[0][0]
-            sql_menu_info = rows[0][1]
-        
-        except:
-            sql_menu_name = None
-            sql_menu_info = None
-            # 만약 SQL에 DB가 없어 에러가 발생했을 경우에 예외처리를 통해 None 할당
-        
-        
-        # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함
-        # 메뉴판에서 여러 음식에 대한 정보를 가져오게 될 경우 방법을 수정
-        # for문 이용해야할 것
-        zip_result = list(zip(join_str, translated_text))
+                # 두 결과값에 대한 변수 할당, 0번 자리에 튜플로 되어있음
+                sql_menu_name = rows[0][0]
+                sql_menu_info = rows[0][1]
+            
+            except:
+                sql_menu_name = None
+                sql_menu_info = None
+                # 만약 SQL에 DB가 없어 에러가 발생했을 경우에 예외처리를 통해 None 할당
+            
+            # 이미지 링크 변수 할당
+            query_url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={search_engine_id}&q={text}&searchType=image'
+            
+            # 이 과정이 있어야 이미지의 대한 정보를 가져올 수 있음
+            img_response = requests.get(query_url).json()
+            
+            try:
+                # json은 딕셔너리의 형태를 가지고 있음 img_response의 keys 중 items의 요소 내에서
+                # item['link'] keys의 대한 value가 image_link에 해당함
+                items_list = img_response['items']
+                img_links = [item['link'] for item in items_list if url_pattern.match(item['link'])][:3]
+                images_link.append(img_links)
+                
+            except KeyError:
+                error_message = f'{text}에 해당하는 링크를 찾지 못했습니다.'
+            
+            sql_name_list.append(sql_menu_name)
+            sql_info_list.append(sql_menu_info)
+            # print(sql_name_list)
+            # print(sql_info_list)
+            # print(images_links)
+            
+            # 아직까지는 음식 하나에 대한 정보만 추출하는 방법을 사용함
+            # 메뉴판에서 여러 음식에 대한 정보를 가져오게 될 경우 방법을 수정
+            # for문 이용해야할 것
+            zip_result = list(zip(join_str, translated_text, sql_name_list, sql_info_list, images_link))
+            # print(zip_result)
         
         return render(request, 'ocr/result.html', 
-                    {'join_str': join_str, 'translated_text': translated_text,
-                    'sql_menu_name': sql_menu_name, 'sql_menu_info': sql_menu_info, 'image_links': image_links, 'error_message': error_message, 'zip_result': zip_result})
+                    {'zip_result': zip_result, 'error_message': error_message})
                     # join_str과 translated_text를 dict 형태로 result.html로 return
                     # 추가 변수를 return할 때 뒤에 key, value 형식으로 추가하면 됨
     else:
