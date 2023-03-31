@@ -1,0 +1,962 @@
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	µ¤¹ä                       	0.9995
+crop\cropped_1.png       	Ã¶ÆÇ ºÒ°í±â                   	0.9990
+crop\cropped_2.png       	9,500                    	0.9979
+crop\cropped_3.png       	°¨ÀÚÃ¤Æ¢±è                    	0.9454
+crop\cropped_4.png       	¹Ù»è                       	0.9912
+crop\cropped_5.png       	7,000                    	0.9788
+crop\cropped_6.png       	°¡¶ô                       	0.9990
+crop\cropped_7.png       	¶±ººÀÌ                      	0.9993
+crop\cropped_8.png       	7,500                    	0.9983
+crop\cropped_9.png       	°¡¶ô                       	0.9991
+crop\cropped_10.png      	Ä¡Áî                       	0.9999
+crop\cropped_11.png      	¶±ººÀÌ                      	0.9996
+crop\cropped_12.png      	8,900                    	0.9997
+crop\cropped_13.png      	°¡¶ô                       	0.9988
+crop\cropped_14.png      	·ÎÁ¦                       	0.7058
+crop\cropped_15.png      	¶±ººÀÌ                      	0.9988
+crop\cropped_16.png      	9,000                    	0.8051
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	µ¤¹ä                       	0.8558
+crop\cropped_1.png       	Ã¶ÆÇºÒ°í±â                    	0.9978
+crop\cropped_2.png       	9.500                    	0.4539
+crop\cropped_3.png       	°¨ÀÚÃ¤ Æ¢±è                   	0.9906
+crop\cropped_4.png       	¹Ù»è                       	0.9753
+crop\cropped_5.png       	3000                     	0.7650
+crop\cropped_6.png       	°¡¶ô                       	0.9759
+crop\cropped_7.png       	¶±ººÀÌ                      	0.9971
+crop\cropped_8.png       	33500                    	0.3848
+crop\cropped_9.png       	°¡¶ô                       	0.9866
+crop\cropped_10.png      	Ä¡Áî                       	0.9987
+crop\cropped_11.png      	¶±ººÀÌ                      	0.9854
+crop\cropped_12.png      	8.900                    	0.3778
+crop\cropped_13.png      	°¡¶ô                       	0.9397
+crop\cropped_14.png      	·ÎÁ¦                       	0.5091
+crop\cropped_15.png      	¶±ººÀÌ                      	0.9967
+crop\cropped_16.png      	9,000                    	0.1726
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9490
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9987
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9852
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·Ô¿¡ÀÌµå                  	0.9086
+crop\cropped_5.png       	coffee                   	0.9994
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	0.9999
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9996
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9993
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9989
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9885
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.4471
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9979
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9650
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9965
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.8769
+crop\cropped_5.png       	coffee                   	0.9965
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	0.9998
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9984
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9961
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9967
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9938
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9989
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9572
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7186
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0373
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7174
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0372
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7177
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0371
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7184
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0372
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7174
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0372
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7174
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0372
+--------------------------------------------------------------------------------
+image_path               	predicted_labels         	confidence score
+--------------------------------------------------------------------------------
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7178
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0372
+crop\cropped_0.png       	ade                      	0.9885
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7178
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9868
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0371
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7174
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0372
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	¿Õ°¥ºñÅÁ                     	0.9995
+crop\cropped_1.png       	¿Õ°¥ºñÅÁ                     	0.9919
+crop\cropped_2.png       	e°¥ºñÅÁ                     	0.8352
+crop\cropped_0.png       	¿Õ°¥ºñÅÁ                     	0.9995
+crop\cropped_1.png       	¿Õ°¥ºñÅÁ                     	0.9919
+crop\cropped_2.png       	e°¥ºñÅÁ                     	0.8352
+crop\cropped_0.png       	¿Õ°¥ºñÅÁ                     	0.9995
+crop\cropped_1.png       	¿Õ°¥ºñÅÁ                     	0.9919
+crop\cropped_2.png       	e°¥ºñÅÁ                     	0.8352
+crop\cropped_0.png       	¿Õ°¥ºñÅÁ                     	0.9995
+crop\cropped_1.png       	¿Õ°¥ºñÅÁ                     	0.9919
+crop\cropped_2.png       	e°¥ºñÅÁ                     	0.8352
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	¿Õ°¥ºñÅÁ                     	0.9995
+crop\cropped_1.png       	¿Õ°¥ºñÅÁ                     	0.9919
+crop\cropped_2.png       	e°¥ºñÅÁ                     	0.8350
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+crop\cropped_0.png       	ade                      	0.9886
+crop\cropped_1.png       	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+crop\cropped_2.png       	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+crop\cropped_3.png       	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+crop\cropped_4.png       	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+crop\cropped_5.png       	coffee                   	0.9995
+crop\cropped_6.png       	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+crop\cropped_7.png       	Ä«Æä¶ó¶¼                     	0.9998
+crop\cropped_8.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+crop\cropped_9.png       	¾Æ¸óµå¶ó¶¼                    	0.9998
+crop\cropped_10.png      	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+crop\cropped_11.png      	Å©¸²¸ðÄ«                     	0.9999
+crop\cropped_12.png      	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+crop\cropped_13.png      	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	ade                      	0.9886
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+./crop\cropped_5.png     	coffee                   	0.9995
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.9999
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	ade                      	0.9886
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+./crop\cropped_5.png     	coffee                   	0.9995
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.9999
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	ade                      	0.9886
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+./crop\cropped_5.png     	coffee                   	0.9995
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.9999
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	ade                      	0.9886
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+./crop\cropped_5.png     	coffee                   	0.9995
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.9999
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	¿Õ°¥ºñÅÁ                     	0.9995
+./crop\cropped_1.png     	¿Õ°¥ºñÅÁ                     	0.9919
+./crop\cropped_2.png     	e°¥ºñÅÁ                     	0.8352
+./crop\cropped_0.png     	¿Õ°¥ºñÅÁ                     	0.9995
+./crop\cropped_1.png     	¿Õ°¥ºñÅÁ                     	0.9919
+./crop\cropped_2.png     	e°¥ºñÅÁ                     	0.8352
+./crop\cropped_0.png     	ade                      	0.9886
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+./crop\cropped_5.png     	coffee                   	0.9995
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.9999
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	¿Õ°¥ºñÅÁ                     	0.9995
+./crop\cropped_1.png     	¿Õ°¥ºñÅÁ                     	0.9919
+./crop\cropped_2.png     	e°¥ºñÅÁ                     	0.8352
+./crop\cropped_0.png     	ade                      	0.9886
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9998
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9987
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·í¿¡ÀÌµå                  	0.7173
+./crop\cropped_5.png     	coffee                   	0.9995
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9986
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9986
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.9999
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9869
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	°ø±â¹ä                      	0.9998
+./crop\cropped_1.png     	À½·á¼ö                      	0.9518
+./crop\cropped_2.png     	ººÀ½¹ä(´©¶ËÁö                  	0.5185
+./crop\cropped_3.png     	³¿ºñ¹ä)                     	0.9833
+./crop\cropped_4.png     	¶¯ÃÊººÀ½¹ä(¸¶¾à                 	0.8982
+./crop\cropped_5.png     	´©¹¶Áö)                     	0.2913
+./crop\cropped_6.png     	ÆøºÐÀÚ                      	0.4034
+./crop\cropped_7.png     	»ê»çÃá                      	0.9533
+./crop\cropped_8.png     	¼³Áß¸Å                      	0.9606
+./crop\cropped_9.png     	½ºÆÄÅ¬¸µ                     	0.9999
+./crop\cropped_10.png    	¸·°É¸®                      	0.9789
+./crop\cropped_11.png    	Ã»ÇÏ                       	0.9998
+./crop\cropped_12.png    	¸ÅÈ­¼ö                      	0.9888
+./crop\cropped_13.png    	¼ÒÁÖ(ÂüÀÌ½½,                  	0.4128
+./crop\cropped_14.png    	Ã³À½Ã³·³)                    	0.9656
+./crop\cropped_15.png    	¸ÆÁÖ                       	0.7505
+./crop\cropped_0.png     	°ø±â¹ä                      	0.9998
+./crop\cropped_1.png     	À½·á¼ö                      	0.9518
+./crop\cropped_2.png     	ººÀ½¹ä(´©¶ËÁö                  	0.5185
+./crop\cropped_3.png     	³¿ºñ¹ä)                     	0.9833
+./crop\cropped_4.png     	¶¯ÃÊººÀ½¹ä(¸¶¾à                 	0.8982
+./crop\cropped_5.png     	´©¹¶Áö)                     	0.2913
+./crop\cropped_6.png     	ÆøºÐÀÚ                      	0.4034
+./crop\cropped_7.png     	»ê»çÃá                      	0.9533
+./crop\cropped_8.png     	¼³Áß¸Å                      	0.9606
+./crop\cropped_9.png     	½ºÆÄÅ¬¸µ                     	0.9999
+./crop\cropped_10.png    	¸·°É¸®                      	0.9789
+./crop\cropped_11.png    	Ã»ÇÏ                       	0.9998
+./crop\cropped_12.png    	¸ÅÈ­¼ö                      	0.9888
+./crop\cropped_13.png    	¼ÒÁÖ(ÂüÀÌ½½,                  	0.4128
+./crop\cropped_14.png    	Ã³À½Ã³·³)                    	0.9656
+./crop\cropped_15.png    	¸ÆÁÖ                       	0.7505
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	ade                      	0.9963
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9996
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9959
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·Ô¿¡ÀÌµå                  	0.8089
+./crop\cropped_5.png     	coffee                   	0.9992
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9993
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9987
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.6503
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9774
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	¿Õ°¥ºñÅÁ                     	0.9979
+./crop\cropped_1.png     	¿Õ°¥ºñÅÁ                     	0.9919
+./crop\cropped_2.png     	°¥ºñÅÁ                      	0.9990
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	ade                      	0.9963
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9996
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9959
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·Ô¿¡ÀÌµå                  	0.8089
+./crop\cropped_5.png     	coffee                   	0.9992
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9993
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9987
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.6503
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9774
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	ade                      	0.9963
+./crop\cropped_1.png     	¾ÖÇÃ¿¡ÀÌµå                    	0.9996
+./crop\cropped_2.png     	º¹¼þ¾Æ¿¡ÀÌµå                   	0.9959
+./crop\cropped_3.png     	ÀÚ¸ù¿¡ÀÌµå                    	0.9998
+./crop\cropped_4.png     	ÆÐ¼ÇÇÁ·Ô¿¡ÀÌµå                  	0.8089
+./crop\cropped_5.png     	coffee                   	0.9992
+./crop\cropped_6.png     	¾Æ¸Þ¸®Ä«³ë                    	1.0000
+./crop\cropped_7.png     	Ä«Æä¶ó¶¼                     	0.9998
+./crop\cropped_8.png     	¹Ù´Ò¶ó¶ó¶¼                    	0.9993
+./crop\cropped_9.png     	¾Æ¸óµå¶ó¶¼                    	0.9998
+./crop\cropped_10.png    	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9987
+./crop\cropped_11.png    	Å©¸²¸ðÄ«                     	0.6503
+./crop\cropped_12.png    	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.9774
+./crop\cropped_13.png    	ºí·¢Ä«ÇªÄ¡³ë.o.                	0.0375
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+./crop\cropped_0.png     	Ã¶ÆÇ ºÒ°í±âµ¤¹ä                 	0.9878
+./crop\cropped_1.png     	9,500                    	0.9985
+./crop\cropped_2.png     	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7575
+./crop\cropped_3.png     	7,000                    	0.9989
+./crop\cropped_4.png     	°¡¶ô ¶±ººÀÌ                   	0.9855
+./crop\cropped_5.png     	7,500                    	0.9987
+./crop\cropped_6.png     	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.2867
+./crop\cropped_7.png     	8,900                    	0.9627
+./crop\cropped_8.png     	 ·ÎÁ¦ °¡¶ô ¶±ºº¹Ì1              	0.0912
+./crop\cropped_9.png     	9,000                    	0.9439
+./crop\cropped_10.png    	´Ï»õ¿ìµ¤¼¶,Æ¢±è¸¸Æ¢Æ¢              	0.0192
+./crop\cropped_11.png    	5,500                    	0.9871
+crop\cropped_0.png       	Ã¶ÆÇºÒ°í±â µ¤¹ä                 	0.9696
+crop\cropped_1.png       	9.500                    	0.6730
+crop\cropped_2.png       	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7686
+crop\cropped_3.png       	3000                     	0.5177
+crop\cropped_4.png       	°¡¶ô¶±ººÀÌ                    	0.9985
+crop\cropped_5.png       	3500                     	0.6100
+crop\cropped_6.png       	Ä¡Áî1¶ô¿¡¶±ººÀÌ                 	0.0455
+crop\cropped_7.png       	8,900                    	0.8686
+crop\cropped_8.png       	·ÎÁ¦ °¡¶ô ¶±ººÀÌ                	0.7923
+crop\cropped_9.png       	9,000                    	0.6468
+crop\cropped_10.png      	»õ¿ìµõ¼¶,Æ¢±è¸¸µÎ                	0.3092
+crop\cropped_11.png      	5.500                    	0.8442
+crop\cropped_0.png       	Ã¶ÆÇºÒ°í±â µ¤¹ä                 	0.9696
+crop\cropped_1.png       	9.500                    	0.6730
+crop\cropped_2.png       	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7686
+crop\cropped_3.png       	3000                     	0.5177
+crop\cropped_4.png       	°¡¶ô¶±ººÀÌ                    	0.9985
+crop\cropped_5.png       	3500                     	0.6100
+crop\cropped_6.png       	Ä¡Áî1¶ô¿¡¶±ººÀÌ                 	0.0455
+crop\cropped_7.png       	8,900                    	0.8686
+crop\cropped_8.png       	·ÎÁ¦ °¡¶ô ¶±ººÀÌ                	0.7923
+crop\cropped_9.png       	9,000                    	0.6468
+crop\cropped_10.png      	»õ¿ìµõ¼¶,Æ¢±è¸¸µÎ                	0.3092
+crop\cropped_11.png      	5.500                    	0.8442
+crop\cropped_0.png       	Ã¶ÆÇºÒ°í±â µ¤¹ä                 	0.9696
+crop\cropped_1.png       	9.500                    	0.6730
+crop\cropped_2.png       	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.7686
+crop\cropped_3.png       	3000                     	0.5177
+crop\cropped_4.png       	°¡¶ô¶±ººÀÌ                    	0.9985
+crop\cropped_5.png       	3500                     	0.6100
+crop\cropped_6.png       	Ä¡Áî1¶ô¿¡¶±ººÀÌ                 	0.0455
+crop\cropped_7.png       	8,900                    	0.8686
+crop\cropped_8.png       	·ÎÁ¦ °¡¶ô ¶±ººÀÌ                	0.7923
+crop\cropped_9.png       	9,000                    	0.6468
+crop\cropped_10.png      	»õ¿ìµõ¼¶,Æ¢±è¸¸µÎ                	0.3092
+crop\cropped_11.png      	5.500                    	0.8442
+crop\cropped_0.png       	°ø±â¹ä                      	0.9831
+crop\cropped_1.png       	À½·á¼ö                      	0.6975
+crop\cropped_2.png       	ººÀ½¹ä(´©¶×Áö.ÄÞºñ¹ä)             	0.0290
+crop\cropped_3.png       	¶¯ÃÊººººÀ½¹ä(¸¶¾à ´©·îÁö)           	0.0020
+crop\cropped_4.png       	º¹ºÐÀÚ                      	0.9938
+crop\cropped_5.png       	»ê»çÃß                      	0.5790
+crop\cropped_6.png       	¼³Áß¸Å ½ºÆÄÅ¬¸µ                 	0.8120
+crop\cropped_7.png       	¸·Áú¸®                      	0.4643
+crop\cropped_8.png       	Ã»Çã                       	0.6573
+crop\cropped_9.png       	¸ÓÈ­¼ö                      	0.7726
+crop\cropped_10.png      	¼ÒÁÖ(ÂüÀÌ½½,)Ã³À½Ã³·³)            	0.0733
+crop\cropped_11.png      	¸ÆÁÖ                       	0.5828
+crop\cropped_0.png       	°ø±â¹ä                      	0.5501
+crop\cropped_1.png       	À½·á¼ö                      	0.9971
+crop\cropped_2.png       	ººÀ½¹ä(´©Ç³Áö ³¿ºñ¹ä)             	0.3964
+crop\cropped_3.png       	¶¯ÃÊ ººÀ½¹ä(¸¶¾à ´©·îÁö)           	0.0593
+crop\cropped_4.png       	º¹ºÐÀÚ                      	0.9976
+crop\cropped_5.png       	»ê»çÃá                      	0.9751
+crop\cropped_6.png       	¼³Áß¸Å ½ºÆÄÅ¬¸µ                 	0.5263
+crop\cropped_7.png       	¸·°É¸®                      	0.9715
+crop\cropped_8.png       	Ã»ÇÏ                       	1.0000
+crop\cropped_9.png       	¸ÅÈ­¼ö                      	0.9972
+crop\cropped_10.png      	¼ÒÁÖ(ÂüÀÌ½½,,Ã³¿ÈÃ³·³)            	0.1038
+crop\cropped_11.png      	¸ÆÁÖ                       	0.9994
+crop\cropped_0.png       	Ã¶ÆÇ ºÒ°í±â µ¤¹ä                	0.9972
+crop\cropped_1.png       	9,500                    	0.9935
+crop\cropped_2.png       	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.9933
+crop\cropped_3.png       	7,000                    	0.9925
+crop\cropped_4.png       	°¡¶ô ¶±ººÀÌ                   	0.9997
+crop\cropped_5.png       	7,500                    	0.9981
+crop\cropped_6.png       	Ä¡Áî °¡¶ô ¶±ººÀÌ                	0.9753
+crop\cropped_7.png       	8,900                    	0.9992
+crop\cropped_8.png       	·ÎÁ¦ °¡¶ô ¶±ººÀÌ                	0.8958
+crop\cropped_9.png       	9,000                    	0.9345
+crop\cropped_10.png      	»õ¿ìµõ¼¶ Æ¢±è¸¸µÎ(               	0.2640
+crop\cropped_11.png      	5,500                    	0.9998
+crop\cropped_0.png       	¾Æ¸ß¸®Ä«³ë                    	0.8173
+crop\cropped_1.png       	Ä«Æä¶óÆä                     	0.4334
+crop\cropped_2.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9998
+crop\cropped_3.png       	¾Æ¸óµå¶ó¶¼                    	0.9549
+crop\cropped_4.png       	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9813
+crop\cropped_5.png       	Å©¸²¸ðÄ«                     	0.6081
+crop\cropped_6.png       	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.8891
+crop\cropped_7.png       	ºí·¢Ä«ÇªÄ¡³ëpi                 	0.0075
+crop\cropped_0.png       	¾Æ¸ß¸®Ä«³ë                    	0.8173
+crop\cropped_1.png       	Ä«Æä¶óÆä                     	0.4334
+crop\cropped_2.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9998
+crop\cropped_3.png       	¾Æ¸óµå¶ó¶¼                    	0.9549
+crop\cropped_4.png       	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9813
+crop\cropped_5.png       	Å©¸²¸ðÄ«                     	0.6081
+crop\cropped_6.png       	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.8891
+crop\cropped_7.png       	ºí·¢Ä«ÇªÄ¡³ëpi                 	0.0075
+crop\cropped_0.png       	¾Æ¸ß¸®Ä«³ë                    	0.8173
+crop\cropped_1.png       	Ä«Æä¶óÆä                     	0.4334
+crop\cropped_2.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9998
+crop\cropped_3.png       	¾Æ¸óµå¶ó¶¼                    	0.9549
+crop\cropped_4.png       	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9813
+crop\cropped_5.png       	Å©¸²¸ðÄ«                     	0.6081
+crop\cropped_6.png       	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.8891
+crop\cropped_7.png       	ºí·¢Ä«ÇªÄ¡³ëpi                 	0.0075
+crop\cropped_0.png       	Ã¶ÆÇ ºÒ°í±â µ¤¹ä                	0.9979
+crop\cropped_1.png       	9,500                    	0.9979
+crop\cropped_2.png       	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.9332
+crop\cropped_3.png       	7,000                    	0.8764
+crop\cropped_4.png       	°¡¶ô ¶±ººÀÌ                   	0.9997

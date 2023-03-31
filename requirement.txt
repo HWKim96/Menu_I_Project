@@ -4,3 +4,4 @@ easyocr
 pillow
 mysql-connector-python
 google-api-python-client
+lmdb

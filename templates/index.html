@@ -512,109 +512,155 @@
                     <h2 class="section-heading text-uppercase">Drag & Drop Here</h2>
                     <h3 class="section-subheading text-muted">번역하고자 하는 메뉴판 이미지를 이곳에 " Drop " 해주세요! </h3>
                 </div>
-
                 <!-- 이미지 업로드 POST -->
                 <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <!-- 장고에서 지원하는 보안 토큰 -->
-
+                
                     <!-- 이미지 드랍존 (이미지 Drag N Drop 영역) -->
                     <div class="parent">
                         <div id="dropzone" class="dropzone-center">
-                          <input type="file" name="image" id="image-input" accept="image/*" style="display: none;" />
-                          <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
+                            <input type="file" name="image" id="image-input" accept="image/*" style="display: none;" />
+                            <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
                         </div>
-                      </div>
-                      
-                      <!-- <div class="text-center" style="width: 30em;">
-                        <form action="{% url 'upload' %}" method="POST">
-                          {% csrf_token %}
-                          <div class="input-group">
-                            <select id="language" name="language" class="form-select">
-                              <option value="en">English</option>
-                              <option value="ja">日本語</option>
-                              <option value="cn">中文</option>
-                            </select>
-                            <button type="submit" class="btn btn-primary btn-xl text-uppercase" style="margin-right: 100px;">Submit</button>
-                            <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
+                    </div>
+                    <div class="input-group" style="width: 400px; margin:0 auto;">
+                        <select id="language" name="language" class="form-select mb-3" style="margin-bottom: 5px; text-align: center;">
+                            <option value="en">English</option>
+                            <option value="ja">日本語</option>
+                            <option value="cn">中文</option>
+                        </select>
+                    </div>
+                    <div class="row justify-content-center" style="width: 900px; margin:0 auto;">
+                        <div class="col-md-3">
+                            <button type="button" id="save-button" class="btn btn-primary btn-xl text-uppercase w-100">Detect</button>
                           </div>
-                        </form>
-                      </div> -->
-
-                      <div class="text-center" style="width: 300px;margin:0 auto;">
-                        <form action="{% url 'upload' %}" method="POST">
-                          {% csrf_token %}
-                          <div class="input-group">
-                            <select id="language" name="language" class="form-select">
-                              <option value="en">English</option>
-                              <option value="ja">日本語</option>
-                              <option value="cn">中文</option>
-                            </select>
+                          <div class="col-md-3">
+                            <button type="submit" id="submit-button" class="btn btn-primary btn-xl text-uppercase w-100">Submit</button>
                           </div>
-                          
-                          <button type="submit" class="btn btn-primary btn-xl text-uppercase" style="width:145px;">Submit</button>
-                          <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
-                        </form>
-                      </div>
-
+                          <div class="col-md-3">
+                            <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase w-100">Reset</button>
+                          </div>
+                    </div>                    
                 </form>
+
 
                 <!-- Drag N Drop Script -->
                 <script>
                     const dropzone = document.getElementById('dropzone');
                     const imageInput = document.getElementById('image-input');
-                  
+                    const saveButton = document.getElementById('save-button');
+                    const detectButton = document.getElementById('detect-button');
+                    const form = document.querySelector('form');
+                
                     dropzone.addEventListener('dragover', e => {
-                      e.preventDefault(); /* 이미지를 드래그 하는 동안 기본 동작 막아줌 */
-                      dropzone.classList.add('dragover');
+                        e.preventDefault();
+                        dropzone.classList.add('dragover');
                     });
-                  
+                
                     dropzone.addEventListener('dragleave', e => {
-                      e.preventDefault(); /* 이미지를 드래그하다 드랍존 벗어날 때 기본 동작 막아줌 */
-                      dropzone.classList.remove('dragover');
+                        e.preventDefault();
+                        dropzone.classList.remove('dragover');
                     });
-                  
+                
                     dropzone.addEventListener('drop', e => {
-                      e.preventDefault(); /* 이미지를 드랍할 때 기본 동작 막아줌 */
-                      dropzone.classList.remove('dragover');
-                      const files = e.dataTransfer.files;
-                      /* 드롭한 파일 목록을 가져와 files 변수에 할당 */
-                      if (files.length > 0) {
-                        imageInput.files = files;
-                        /* 파일이 0보다 크면 
-                        이미지 파일을 input type="file" 엘리먼트의 files 속성에 추가합니다. */
-                        const fileReader = new FileReader();
-                        /* 파일 읽기 */
-                        fileReader.readAsDataURL(files[0]);
-                        /* 이미지 >> 데이터 URL 변환 */
-                        fileReader.onload = () => {
-                        /* 미리보기 이미지 만들기 */
-                        const elementToRemove = document.getElementById('image_label');
-                        const imagePreview = document.createElement('img');
-                        imagePreview.style.maxWidth = '100%';
-                        imagePreview.style.maxHeight = '100%'; // 추가된 부분
-                        imagePreview.onload = function() {
-                          const dropzone = document.getElementById('dropzone');
-                          const dropzoneRatio = dropzone.offsetWidth / dropzone.offsetHeight;
-                          const imgRatio = this.width / this.height;
-                          if (dropzoneRatio > imgRatio) {
-                            this.style.width = '100%';
-                            this.style.height = 'auto';
-                          } else {
-                            this.style.width = 'auto';
-                            this.style.height = '100%';
-                          }
-                        };
-                        imagePreview.src = fileReader.result;
-                        dropzone.appendChild(imagePreview);
-                        elementToRemove.style.display = 'none';
+                        e.preventDefault();
+                        dropzone.classList.remove('dragover');
+                        const files = e.dataTransfer.files;
+                        if (files.length > 0) {
+                            imageInput.files = files;
+                            const fileReader = new FileReader();
+                            fileReader.readAsDataURL(files[0]);
+                            fileReader.onload = () => {
+                                const elementToRemove = document.getElementById('image_label');
+                                const imagePreview = document.createElement('img');
+                                imagePreview.style.maxWidth = '100%';
+                                imagePreview.style.maxHeight = '100%';
+                                imagePreview.onload = function() {
+                                    const dropzone = document.getElementById('dropzone');
+                                    const dropzoneRatio = dropzone.offsetWidth / dropzone.offsetHeight;
+                                    const imgRatio = this.width / this.height;
+                                    if (dropzoneRatio > imgRatio) {
+                                        this.style.width = '100%';
+                                        this.style.height = 'auto';
+                                    } else {
+                                        this.style.width = 'auto';
+                                        this.style.height = '100%';
+                                    }
+                                };
+                                imagePreview.src = fileReader.result;
+                                dropzone.appendChild(imagePreview);
+                                elementToRemove.style.display = 'none';
+                                saveButton.style.display = 'block';
+                            }
                         }
-                      }
                     });
-                  </script>
-                  <!-- Drag N Drop Script End -->
-            </div>
-        </section>
+                
+                    saveButton.addEventListener('click', () => {
+                        const formData = new FormData(form);
+                        formData.append('image', imageInput.files[0]);
+                        fetch('/save-image/', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                    });
+                    detectButton.addEventListener('click', () => {
+                        const formData = new FormData(form);
+                        formData.append('image', imageInput.files[0]);
+                        fetch('/detect-crop-button/', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                    });
+
+
+                    function sendPostRequest() {
+                        var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+                        var form_data = new FormData();
+                        form_data.append("csrfmiddlewaretoken", csrf_token);
+                        $.ajax({
+                            url: "{% url 'detect' %}",
+                            type: "POST",
+                            data: form_data,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                console.log(response);
+                            },
+                            error: function(xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                    };
+                    
+                    {% comment %} function runOCR() {
+                        var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+                        var form_data = new FormData();
+                        form_data.append("csrfmiddlewaretoken", csrf_token);
+                        $.ajax({
+                            url: "{% url 'run_ocr' %}",
+                            type: "POST",
+                            data: form_data,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                console.log(response);
+                            },
+                            error: function(xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                    }; {% endcomment %}
+
+                </script>
+                <!-- Drag N Drop Script End -->
 
 
 
@@ -640,14 +686,6 @@
                 </div>
             </div>
         </footer>
-
-
-
-
-
-
-
-
 
 
         <!-- Portfolio Modals-->
