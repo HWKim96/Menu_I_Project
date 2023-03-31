@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from pybo.views import base_views
 from django.views.generic.base import TemplateView
-from ocr.views import upload, save_detect, detect
 from ocr import views
 
 urlpatterns = [
@@ -28,7 +27,8 @@ urlpatterns = [
     #path('pybo/', base_views.index, name='index'),  # '/' 에 해당되는 path /
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
     path('upload/', views.upload, name='upload'),
-    path('save-image/', save_detect, name='save_detect'),
+    path('save-image/', views.save_detect, name='save_detect'),
     path('detect/', views.detect, name='detect'),
-    # path('run_ocr/', views.run_ocr, name='run_ocr'),
+    path('cropimg/', TemplateView.as_view(template_name='cropimg.html'), name='cropimg'),
+    path('transmit/', views.transmit, name='transmit')
 ]

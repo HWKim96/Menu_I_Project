@@ -19,11 +19,6 @@
             <input type="hidden" name="next" value="{{ next }}">  <!-- 로그인 성공후 이동되는 URL -->
             {% comment %} {% include "form_errors.html" %}  {% endcomment %} <!--팝업창으로변경 -->
         <div class="wrap">
-            <header id="header" class="text-center mt-5" style="height: 70vh; display: flex; justify-content: center;">
-                <h1 class="text-center mt-5" >
-                    <a class="text-white" href="{% url 'home' %}">Menu 'I'</a>
-                </h1>
-            </header>
         <div class="login">
             <h2>Log-in</h2>
             <div class="login_sns">
@@ -49,6 +44,7 @@
                 <input type="button" class="button" id="signup" value="Sign up" onclick="location.href='{% url 'common:signup' %}'">
 
             </div>
+
             <!-- 모달 팝업창 추가함 -->
             <div id="error-modal" class="modal">
                 <div class="modal-content">
