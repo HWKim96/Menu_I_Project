@@ -7,7 +7,17 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Team 2nd : Menu ' i '</title>
-
+        <script language="javascript">
+            function showPopup() {
+                window.open("/cropimg/", "Crop", "width=1000, height=900, left=500, top=500");
+            }
+        </script>
+        <script language="javascript">
+            function moveClose() {
+              opener.location.href="";
+              self.close();
+            }
+        </script>
 
 
         <style>
@@ -18,22 +28,20 @@
                 height: 100vh;
             }*/
 
-            #dropzone {
-                width: 500px;
-                height: 500px;
-                border: 5px dashed rgb(22, 214, 147);   
-                border-width: 8px;
-                text-align: center;
-                line-height: 300px;
-                font-size: 30px;
-                font-weight: bold;
-                margin-bottom: 100px;
-                margin-left: 420px;
-                color: rgb(250, 131, 12)
-                /*position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(50%, 50%)*/
+
+                #dropzone {
+                    width: 500px;
+                    height: 500px;
+                    border: 5px dashed rgb(161 74 19);
+                    border-width: 8px;
+                    text-align: center;
+                    line-height: 300px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: -74px;
+                    margin-left: 800px;
+                    color: rgb(250, 131, 12) 
+                    /*position: absolute; top: 50%; left: 50%; transform: translate(50%, 50%)*/;
                 
             }
             #image {
@@ -42,6 +50,27 @@
                 padding-left: 0rem;
             }
             
+
+            #b1{
+                width: 100px;
+                height: 40px;
+                background-color: rgb(31, 192, 52);
+                border: solid;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            #b2{
+                width: 100px;
+                height: 40px;
+                background-color: rgb(31, 192, 52);
+                border: solid;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
         </style>
 
 
@@ -106,9 +135,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#첫번째 단락">Outline.</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#개요">Outline.</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Staff</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ServiceIntroduce">Service</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#team">Staff 소개</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Let's Menu'I'</a></li>
                         <li class="nav-item dropdown">
@@ -177,8 +206,10 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">🏅 Team: Menu ' I ' 🏅</div>
-                <div class="masthead-heading text-uppercase">『Computer Vision Project』</div>
+                <div class="masthead-subheading"></div>
+                <!-- <div class="masthead-heading text-uppercase">『 Menu 'I' 』</div> -->
+                <div class="masthead-heading text-uppercase"> <img src="../static/images/logo3_trans.png" alt=""> </div>
+                <!-- <img src="../static/images/(누끼딴거)현우님이주신.png" alt=""> -->
                 <!-- <a class="btn btn-primary btn-xl text-uppercase" href="#첫번째 단락">More</a> -->
             </div>
         </header>
@@ -186,11 +217,11 @@
 
         
         <!-- 첫번째 단락-->
-        <section class="page-section" id="첫번째 단락">
+        <section class="page-section" id="개요">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Menu i Logo + 기능개요</h2>
-                    <h3 class="section-subheading text-muted">간략한 개요를 설명해드리겠습니다.</h3>
+                    <h2 class="section-heading text-uppercase">🔹Outline🔹</h2>
+                    <h3 class="section-subheading text-muted"></h3>
                 </div>
 
                 <div class="row text-center">
@@ -203,7 +234,7 @@
                             <i class="fa-solid fa-camera fa-stack-1x text-white"></i>
                         </span>
                         <h4 class="my-3">메뉴판 OCR인식</h4>
-                        <p class="text-muted">임시:  저희는 EasyOCR을 이용한 text detect를 이용해서 메뉴판이미지를 인식하기위한 모델을 구축했습니다. (Bbox개별선택기능? 드래그기능?)</p>
+                        <p class="text-muted">Computer Vision에 관한 Deeplearing모델을 사용하여, OCR detect를 통해 한국어 메뉴판을 인식한후 메뉴판의 이미지로부터 텍스트를 추출합니다.</p>
                     </div>
 
 
@@ -218,8 +249,8 @@
                             <!-- <i class="fa-solid fa-cog fa-spin"></i> -->
                             <!-- <i class="fas fa-laptop fa-stack-1x fa-inverse"></i> -->
                         </span>
-                        <h4 class="my-3">API 활용</h4>
-                        <p class="text-muted">각종 Api들을 활용(번역 Api_ papago, DeepL // google, wikipedia? 음식의 대표사진 및 주요 재료 정보 // 환율도..?)</p>
+                        <h4 class="my-3">API</h4>
+                        <p class="text-muted">Detecting이후 인식된 한국어 메뉴이름들을 API를 활용해 번역하고, 더 나아가 해당 음식들에 대한 정보를 곁들여 보여주는 기능을 덧붙였습니다. </p>
                     </div>
 
                     <div class="col-md-4">
@@ -229,7 +260,7 @@
                             <i class="fa-solid fa-envelope fa-bounce text-white" style="--fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 5;"></i>
                         </span>
                         <h4 class="my-3">Bookmark 및 History 기능</h4>
-                        <p class="text-muted">검색했었던 Menu들의 번역내역을 텍스트로 저장합니다. -> 나중에 메뉴를 주문할때 다시 보면서 직원에게 주문할수있도록 하기 위함입니다. </p>
+                        <p class="text-muted">여기다가 뭘넣냐.. </p>
                     </div>
 
                 </div>
@@ -251,7 +282,7 @@
         <section class="path fill="currentColor"ge-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Menu ' I ' Staff</h2> <br>
+                    <h2 class="section-heading text-uppercase">🔹Menu ' I ' Staff🔹</h2> <br>
                     <h3 class="section-subheading text-muted"> [Introduce each member's position] </h3> <br>
                 </div>
                 <div class="row">
@@ -264,11 +295,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../static/images/(600450)ai-cloud-with-robot-face_23-2149739758.jpg" alt="..." />
+                                <img class="img-fluid" src="../static/images/(600450)ai-cloud-with-robot-face_23-2149739758.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">김 현 우</div>
-                                <div class="portfolio-caption-subheading text-muted">조장, Modeling</div>
+                                <div class="portfolio-caption-subheading text-muted">Team Leader <br> Modeling BackEnd</div>
                             </div>
                         </div>
                     </div>
@@ -280,11 +311,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../static/images/(600450) D-P profile Image.jpeg" alt="..." />
+                                <img class="img-fluid" src="../static/images/(600450) D-P profile Image.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">김 성 수</div>
-                                <div class="portfolio-caption-subheading text-muted">부조장, Front End</div>
+                                <div class="portfolio-caption-subheading text-muted">Vice Team Leader <br> FrontEnd BackEnd</div>
                             </div>
                         </div>
                     </div>
@@ -296,11 +327,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../static/images/(600 450)adorable-little-poodle-with-cute-bunny-ears-on-a-beige-surface_181624-39109.jpg" alt="..." />
+                                <img class="img-fluid" src="../static/images/(600 450)adorable-little-poodle-with-cute-bunny-ears-on-a-beige-surface_181624-39109.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">박 보 경</div>
-                                <div class="portfolio-caption-subheading text-muted">Modeling</div>
+                                <div class="portfolio-caption-subheading text-muted">Team Member <br> Modeling</div>
                             </div>
                         </div>
                     </div>
@@ -312,11 +343,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../static/images/(600 450)cute-little-dog-impersonating-a-business-person_23-2148985938.jpg" alt="..." />
+                                <img class="img-fluid" src="../static/images/(600 450)cute-little-dog-impersonating-a-business-person_23-2148985938.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">이 지 민</div>
-                                <div class="portfolio-caption-subheading text-muted">Modeling</div>
+                                <div class="portfolio-caption-subheading text-muted">Team Member <br> Modeling</div>
                             </div>
                         </div>
                     </div>
@@ -328,11 +359,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../static/images/(600 450) little-young-dog-posing-cheerful_155003-28762.jpg" alt="..." />
+                                <img class="img-fluid" src="../static/images/(600 450) little-young-dog-posing-cheerful_155003-28762.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">홍 수 민</div>
-                                <div class="portfolio-caption-subheading text-muted">Back End</div>
+                                <div class="portfolio-caption-subheading text-muted">Team Member <br> Back End</div>
                             </div>
                         </div>
                     </div>
@@ -362,68 +393,87 @@
 
 
         <!-- About-->
-        <section class="page-section" id="about">
+        <section class="page-section" id="ServiceIntroduce">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">"문제정의 + 기획의도"</h2>
-                    <h3 class="section-subheading text-muted">저희가 출사표를 던지게 된 경위를 보여드립니다.</h3>
+                    <h2 class="section-heading text-uppercase">🔹"Outline"🔹</h2>
+                    <h3 class="section-subheading text-muted">   </h3>
                 </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="../static/images/about1.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>23.3.6 ~ 23.3.      구체적인 기간 나중에 WBS참조해서 수정</h4>
+                                <h4>23.3.6 ~ 23.3.8: <br> ✨분석기획단계✨ <br> 주제정의 및 계획수립, 역할분담</h4>
                                 <h4 class="subheading">Our Humble Beginnings</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">ㅂㅈㄷㅁㄴㅇ</p></div>
+                            <div class="timeline-body">한국 식당의 대부분은 한글로만 쓰여진 메뉴판을 <br> 주로 사용합니다. <br>
+                                심지어 사진이 없는 메뉴판이 대부분인 경우가 많습니다. <br> 이러한 점들을 한국을 찾는 관광객들에게 <br>큰 부담이 될것입니다. 
+                                <br>저희는 '이러한 문제를 한번에 해결할수있는 것이 무엇이 있을까'라는 생각에서부터 출발했습니다. 
+                                <p class="text-muted"></p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="../static/images/about2.avif" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>23.3. ~ 23.3. </h4>
-                                <h4 class="subheading">전처리 어쩌고</h4>
+                                <h4>23.3.8 ~ 23.3.12:<br> ✨데이터 탐색 및 가공, 전처리✨
+                                    <br>필요데이터 정의, 수집 및 선별, <br>데이터 관련 전처리 수행</h4>
+                                <h4 class="subheading">
+                                     Be Energetic! 
+                                </h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">ㅂㅈㄷㅁㄴㅇ</p></div>
+                            <div class="timeline-body">저희의 목표는 이미지 OCR을 활용해<br> 한국메뉴판을 인식후 번역하는 서비스를 <br>제공하는것으로 방향을 잡았습니다.<br>
+                                이에 해당되는 데이터들을 물색했고,<br> AIhub 및 각종 공공데이터포털, Kaggle데이터, <br>각종 논문 및 Github등을 참고하면서<br> 저희의 목표에 부합하는 <br> 양질의 데이터들을 
+                                탐색하였습니다.<br><br> OCR모델학습을 위해서는 크게 이미지전처리, <br>문자열 전처리, 데이터 전처리등이 필요했고 <br>각 단계에 맞는 전처리를 유념하며 
+                                <br>모델성능을 높이기 위해 고민하였습니다. <p class="text-muted"></p></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="../static/images/about3.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>23.3. ~ 23.3. </h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>23.3.13 ~ 23.3.24:<br> ✨Modeling설계 및 검증✨<br>필요모델들 탐색 및 데이터에 <br> 적합한 모델 성능검증후 <br>훈련성능 평가와 개선</h4>
+                                <h4 class="subheading">Transition for Full Service</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">ㅂㅈㄷㅁㄴㅇ</p></div>
+                            <div class="timeline-body"><p class="text-muted">우선 간단한 C.V deeplearning모델들을 탐색하면서 <br>어떠한 모델들이 저희 데이터에 잘맞는지 
+                                비교분석하였고<br>모델성능개선중 imageOCR에는 구조적 접근이<br>  필요하다 판단하여 NaverClova에서 제안한 <br>STR Framework를 적용했습니다.<br>
+                            STR Framework 적용후 24개 모델의 조합중 <br> 정확도와 소요시간등을 고려해 모델 2개를 대표로 선정 후 <br> 모델 훈련에 돌입했고, 각종 데이터셋들과 더불어
+                            체계적인 학습을 위해 자체생성데이터를 생성하여 모델성능개선에 일조하였습니다. </p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="../static/images/about4.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>23.3. ~ 23.3. </h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
+                                <h4>23.3.27 ~ 23.3.31<br> ✨서비스 구현 및 개선✨
+                            </h4>
+                                <h4 class="subheading">Menu 'I'</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">ㅂㅈㄷㅁㄴㅇ</p></div>
+                            <div class="timeline-body"><p class="text-muted">detecting과 recognition과정을 거친 이미지들을 <br>번역하고, 또한 해당 이미지에 대한 음식사진을 
+                                <br>제시해줄수있는 음식정보 제공 서비스등을 api를 통해서 <br>구현을 하였습니다. <br>이 과정에서 서비스 표현을 해줄 webpage를 제작하였고<br>django
+                                서버를 구축하여 데이터베이스를 서빙해보면서<br> 얻게된 인사이트들로 좀 더 나은 서비스 개선방안을 위해<br> 지속적으로 노력하고있습니다.<br>
+                                <br>
+                                Menu 'I' 는 코로나의 여파가 잠잠해져감에 따라, <br>앞으로 재시동을 준비하고있는 한국관광산업에 있어서 <br>한국을 찾는 다양한 국적의 외국인들에게 
+                                <br>유의미한 도움을 줄것에 대한 기술과 콘텐츠를 <br>연구-개발하고있습니다. <br>
+                                <br>
+                                딥러닝을 통한 한국음식에 대한 접근성은 물론, <br>외국인들이 우리 음식문화를 다방면으로 손쉽게 접근가능하게하는 <br>서비스가 될수있도록 노력하고있습니다.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                저희가 구현
+                                Under
                                 <br />
-                                한걸 이제
+                                Constant
                                 <br />
-                                보러가실까요
+                                Improvement
                             </h4>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-
 
 
 
@@ -509,40 +559,45 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Drag & Drop Here</h2>
+                    <h2 class="section-heading text-uppercase"></h2>
                     <h3 class="section-subheading text-muted">번역하고자 하는 메뉴판 이미지를 이곳에 " Drop " 해주세요! </h3>
                 </div>
+
                 <!-- 이미지 업로드 POST -->
-                <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                <form action="{% url 'transmit' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                
+                    <!-- 장고에서 지원하는 보안 토큰 -->
+
                     <!-- 이미지 드랍존 (이미지 Drag N Drop 영역) -->
                     <div class="parent">
                         <div id="dropzone" class="dropzone-center">
-                            <input type="file" name="image" id="image-input" accept="image/*" style="display: none;" />
-                            <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
+                          <input type="file" name="image" id="image-input" accept="image/*" style="display: none;" />
+                          <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
                         </div>
-                    </div>
-                    <div class="input-group" style="width: 400px; margin:0 auto;">
-                        <select id="language" name="language" class="form-select mb-3" style="margin-bottom: 5px; text-align: center;">
-                            <option value="en">English</option>
-                            <option value="ja">日本語</option>
-                            <option value="cn">中文</option>
-                        </select>
-                    </div>
-                    <div class="row justify-content-center" style="width: 900px; margin:0 auto;">
-                        <div class="col-md-3">
-                            <button type="button" id="save-button" class="btn btn-primary btn-xl text-uppercase w-100">Detect</button>
-                          </div>
-                          <div class="col-md-3">
-                            <button type="submit" id="submit-button" class="btn btn-primary btn-xl text-uppercase w-100">Submit</button>
-                          </div>
-                          <div class="col-md-3">
-                            <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase w-100">Reset</button>
-                          </div>
-                    </div>                    
-                </form>
 
+                        <input type="button" id="crop" class="btn btn-primary btn-xl text-uppercase" style="width:145px; margin-bottom: -270px;" value="Crop" onclick="showPopup();">
+                        <input type="button" class="btn btn-primary btn-xl text-uppercase" style="width:145px; margin-bottom: -270px;" value="Close" onclick="self.close();">
+                    
+                    </div>
+                </form>
+                      
+                <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="text-center" style="margin-left:770px;">
+                        <div class="input-group" style="width: 400px; margin:0 auto;">
+                            <select id="language" name="language" class="form-select mb-3" style="margin-top: 65px; text-align: center;">
+                                <option value="en">English</option>
+                                <option value="ja">日本語</option>
+                                <option value="cn">中文</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" id="save-button" class="btn btn-primary btn-xl text-uppercase" style="width:145px; margin-bottom:5px;">Detect</button>
+                        <button type="submit" id="submit-button" class="btn btn-primary btn-xl text-uppercase" style="width:145px; margin-bottom:5px;">Submit</button>
+                        <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
+                    </div>
+                </form>
 
                 <!-- Drag N Drop Script -->
                 <script>
@@ -551,50 +606,60 @@
                     const saveButton = document.getElementById('save-button');
                     const detectButton = document.getElementById('detect-button');
                     const form = document.querySelector('form');
-                
+                  
                     dropzone.addEventListener('dragover', e => {
-                        e.preventDefault();
-                        dropzone.classList.add('dragover');
+                      e.preventDefault(); /* 이미지를 드래그 하는 동안 기본 동작 막아줌 */
+                      dropzone.classList.add('dragover');
                     });
-                
+                  
                     dropzone.addEventListener('dragleave', e => {
-                        e.preventDefault();
-                        dropzone.classList.remove('dragover');
+                      e.preventDefault(); /* 이미지를 드래그하다 드랍존 벗어날 때 기본 동작 막아줌 */
+                      dropzone.classList.remove('dragover');
                     });
-                
+                  
                     dropzone.addEventListener('drop', e => {
-                        e.preventDefault();
-                        dropzone.classList.remove('dragover');
-                        const files = e.dataTransfer.files;
-                        if (files.length > 0) {
-                            imageInput.files = files;
-                            const fileReader = new FileReader();
-                            fileReader.readAsDataURL(files[0]);
-                            fileReader.onload = () => {
-                                const elementToRemove = document.getElementById('image_label');
-                                const imagePreview = document.createElement('img');
-                                imagePreview.style.maxWidth = '100%';
-                                imagePreview.style.maxHeight = '100%';
-                                imagePreview.onload = function() {
-                                    const dropzone = document.getElementById('dropzone');
-                                    const dropzoneRatio = dropzone.offsetWidth / dropzone.offsetHeight;
-                                    const imgRatio = this.width / this.height;
-                                    if (dropzoneRatio > imgRatio) {
-                                        this.style.width = '100%';
-                                        this.style.height = 'auto';
-                                    } else {
-                                        this.style.width = 'auto';
-                                        this.style.height = '100%';
-                                    }
-                                };
-                                imagePreview.src = fileReader.result;
-                                dropzone.appendChild(imagePreview);
-                                elementToRemove.style.display = 'none';
-                                saveButton.style.display = 'block';
-                            }
+                      e.preventDefault(); /* 이미지를 드랍할 때 기본 동작 막아줌 */
+                      dropzone.classList.remove('dragover');
+                      const files = e.dataTransfer.files;
+
+                      /* 드롭한 파일 목록을 가져와 files 변수에 할당 */
+                      if (files.length > 0) {
+                        imageInput.files = files;
+                        /* 파일이 0보다 크면 
+                        이미지 파일을 input type="file" 엘리먼트의 files 속성에 추가합니다. */
+                        const fileReader = new FileReader();
+                        /* 파일 읽기 */
+                        fileReader.readAsDataURL(files[0]);
+                        /* 이미지 >> 데이터 URL 변환 */
+                        fileReader.onload = () => {
+
+
+
+                        /* 미리보기 이미지 만들기 */
+                        const elementToRemove = document.getElementById('image_label');
+                        const imagePreview = document.createElement('img');
+                        imagePreview.style.maxWidth = '100%';
+                        imagePreview.style.maxHeight = '100%'; // 추가된 부분
+                        imagePreview.onload = function() {
+                          const dropzone = document.getElementById('dropzone');
+                          const dropzoneRatio = dropzone.offsetWidth / dropzone.offsetHeight;
+                          const imgRatio = this.width / this.height;
+                          if (dropzoneRatio > imgRatio) {
+                            this.style.width = '100%';
+                            this.style.height = 'auto';
+                          } else {
+                            this.style.width = 'auto';
+                            this.style.height = '100%';
+                          }
+                        };
+                        imagePreview.src = fileReader.result;
+                        dropzone.appendChild(imagePreview);
+                        elementToRemove.style.display = 'none';
                         }
+                      }
                     });
-                
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
                     saveButton.addEventListener('click', () => {
                         const formData = new FormData(form);
                         formData.append('image', imageInput.files[0]);
@@ -607,6 +672,7 @@
                             console.log(data);
                         });
                     });
+
                     detectButton.addEventListener('click', () => {
                         const formData = new FormData(form);
                         formData.append('image', imageInput.files[0]);
@@ -619,7 +685,6 @@
                             console.log(data);
                         });
                     });
-
 
                     function sendPostRequest() {
                         var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
@@ -639,28 +704,44 @@
                             }
                         });
                     };
-                    
-                    {% comment %} function runOCR() {
-                        var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
-                        var form_data = new FormData();
-                        form_data.append("csrfmiddlewaretoken", csrf_token);
-                        $.ajax({
-                            url: "{% url 'run_ocr' %}",
-                            type: "POST",
-                            data: form_data,
-                            processData: false,
-                            contentType: false,
-                            success: function(response) {
-                                console.log(response);
-                            },
-                            error: function(xhr, status, error) {
-                                console.log(error);
-                            }
-                        });
-                    }; {% endcomment %}
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                    var imageDataUrl = "";
 
-                </script>
-                <!-- Drag N Drop Script End -->
+                    function handleDrop(e) {
+                    e.preventDefault();
+                    var files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        var file = files[0];
+                        var reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        reader.onload = function(e) {
+                        imageDataUrl = e.target.result;
+                             }
+                        }
+                    }
+
+
+                    function handleSave() {
+                        if (imageDataUrl !== "") {
+                          var newWindow = window.open();
+                          newWindow.document.write('<img src="' + imageDataUrl + '" />');
+                          // 이미지 파일이 base64 인코딩된 문자열로 전달됩니다.
+                          // 이후 다른 작업을 수행할 수 있습니다.
+                        }
+                      }
+                      
+                      
+                    document.getElementById("dropzone").addEventListener("drop", handleDrop);
+                    document.getElementById("save-button").addEventListener("click", handleSave);
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
+
+
+                  </script>
+                  <!-- Drag N Drop Script End -->
+            </div>
+        </section>
 
 
 
@@ -688,6 +769,14 @@
         </footer>
 
 
+
+
+
+
+
+
+
+
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -700,17 +789,17 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">김 현 우</h2>
-                                    <p class="item-intro text-muted">Modeling, Menu ' I ' 이름 아이디어 제공자,  조장 </p>
-                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600450)ai-cloud-with-robot-face_23-2149739758.jpg" alt="..." />
-                                    <p>소개말, 각자 다짐 및 포부나 느낀점들 등등 작성할것</p>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600450)ai-cloud-with-robot-face_23-2149739758.png" alt="..." />
+                                    <p>『 Data Engineer 』</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>작성하고픈거1:</strong>
-                                            123456789
+                                            <strong>Email:</strong>
+                                            lewin0730@gmail.com
                                         </li>
                                         <li>
-                                            <strong>작성하고픈거2:</strong>
-                                            23456789
+                                            <strong>Github:</strong>
+                                            HWKim96
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -738,17 +827,17 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">김 성 수</h2>
-                                    <p class="item-intro text-muted">부조장. 어쩌다보니 FrontEnd </p>
-                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600450) D-P profile Image.jpeg" alt="..." />
-                                    <p>소개말, 각자 다짐 및 포부나 느낀점들 등등 작성할것</p>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600450) D-P profile Image.png" alt="..." />
+                                    <p>『 NLP Master 』</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>작성하고픈거1:</strong>
-                                            123456789
+                                            <strong>Email:</strong>
+                                            topgun20221128@gmail.com
                                         </li>
                                         <li>
-                                            <strong>작성하고픈거2:</strong>
-                                            23456789
+                                            <strong>Github:</strong>
+                                            Topgxn
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -776,17 +865,17 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">박 보 경</h2>
-                                    <p class="item-intro text-muted">Modeling 담당, # 추가하고픈걸 말씀해주세요</p>
-                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600 450)adorable-little-poodle-with-cute-bunny-ears-on-a-beige-surface_181624-39109.jpg" alt="..." />
-                                    <p>소개말, 각자 다짐 및 포부나 느낀점들 등등 작성할것</p>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600 450)adorable-little-poodle-with-cute-bunny-ears-on-a-beige-surface_181624-39109.png" alt="..." />
+                                    <p>『 Data Scientist 』</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>작성하고픈거1:</strong>
-                                            123456789
+                                            <strong>Email:</strong>
+                                            @gmail.com
                                         </li>
                                         <li>
-                                            <strong>작성하고픈거2:</strong>
-                                            23456789
+                                            <strong>Github:</strong>
+                                            id
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -813,18 +902,18 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">이 지 민</h2>
-                                    <p class="item-intro text-muted">Modeling 담당, # 추가하고픈걸 말씀해주세요 
+                                    <p class="item-intro text-muted">
                                     </p>
-                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600 450)cute-little-dog-impersonating-a-business-person_23-2148985938.jpg" alt="..." />
-                                    <p>소개말, 각자 다짐 및 포부나 느낀점들 등등 작성할것</p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600 450)cute-little-dog-impersonating-a-business-person_23-2148985938.png" alt="..." />
+                                    <p>『 Data Scientist 』</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>작성하고픈거1:</strong>
-                                            123456789
+                                            <strong>Email:</strong>
+                                            @gmail.com
                                         </li>
                                         <li>
-                                            <strong>작성하고픈거2:</strong>
-                                            234596789
+                                            <strong>Github:</strong>
+                                            id
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -852,17 +941,17 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">홍 수 민</h2>
-                                    <p class="item-intro text-muted">Back end담당, # 추가하고픈걸 말씀해주세요 </p>
-                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600 450) little-young-dog-posing-cheerful_155003-28762.jpg" alt="..." />
-                                    <p>소개말, 각자 다짐 및 포부나 느낀점들 등등 작성할것</p>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/images/(600 450) little-young-dog-posing-cheerful_155003-28762.png" alt="..." />
+                                    <p>『 Data Engineer 』</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>작성하고픈거1:</strong>
-                                            123456789
+                                            <strong>Email:</strong>
+                                            @gmail.com
                                         </li>
                                         <li>
-                                            <strong>작성하고픈거2:</strong>
-                                            23456789
+                                            <strong>Github:</strong>
+                                            id
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -923,7 +1012,8 @@
         <script src="../static/sigin-in-js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact
+            -forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
