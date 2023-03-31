@@ -931,3 +931,32 @@ crop\cropped_8.png       	·ÎÁ¦ °¡¶ô ¶±ººÀÌ                	0.8958
 crop\cropped_9.png       	9,000                    	0.9345
 crop\cropped_10.png      	»õ¿ìµõ¼¶ Æ¢±è¸¸µÎ(               	0.2640
 crop\cropped_11.png      	5,500                    	0.9998
+crop\cropped_0.png       	¾Æ¸ß¸®Ä«³ë                    	0.8173
+crop\cropped_1.png       	Ä«Æä¶óÆä                     	0.4334
+crop\cropped_2.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9998
+crop\cropped_3.png       	¾Æ¸óµå¶ó¶¼                    	0.9549
+crop\cropped_4.png       	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9813
+crop\cropped_5.png       	Å©¸²¸ðÄ«                     	0.6081
+crop\cropped_6.png       	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.8891
+crop\cropped_7.png       	ºí·¢Ä«ÇªÄ¡³ëpi                 	0.0075
+crop\cropped_0.png       	¾Æ¸ß¸®Ä«³ë                    	0.8173
+crop\cropped_1.png       	Ä«Æä¶óÆä                     	0.4334
+crop\cropped_2.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9998
+crop\cropped_3.png       	¾Æ¸óµå¶ó¶¼                    	0.9549
+crop\cropped_4.png       	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9813
+crop\cropped_5.png       	Å©¸²¸ðÄ«                     	0.6081
+crop\cropped_6.png       	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.8891
+crop\cropped_7.png       	ºí·¢Ä«ÇªÄ¡³ëpi                 	0.0075
+crop\cropped_0.png       	¾Æ¸ß¸®Ä«³ë                    	0.8173
+crop\cropped_1.png       	Ä«Æä¶óÆä                     	0.4334
+crop\cropped_2.png       	¹Ù´Ò¶ó¶ó¶¼                    	0.9998
+crop\cropped_3.png       	¾Æ¸óµå¶ó¶¼                    	0.9549
+crop\cropped_4.png       	ÇìÀÌÁñ³Ó¶ó¶¼                   	0.9813
+crop\cropped_5.png       	Å©¸²¸ðÄ«                     	0.6081
+crop\cropped_6.png       	¼ÖÆ¼Ä«¶ó¸á¶ó¶¼                  	0.8891
+crop\cropped_7.png       	ºí·¢Ä«ÇªÄ¡³ëpi                 	0.0075
+crop\cropped_0.png       	Ã¶ÆÇ ºÒ°í±â µ¤¹ä                	0.9979
+crop\cropped_1.png       	9,500                    	0.9979
+crop\cropped_2.png       	¹Ù»è °¨ÀÚÃ¤ Æ¢±è                	0.9332
+crop\cropped_3.png       	7,000                    	0.8764
+crop\cropped_4.png       	°¡¶ô ¶±ººÀÌ                   	0.9997

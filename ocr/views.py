@@ -18,6 +18,8 @@ import subprocess
 import easydict
 import shutil
 import warnings
+import uuid
+from django.middleware import csrf
 
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # 프로젝트 폴더 경로
@@ -255,3 +257,34 @@ def upload(request):
     else:
         return HttpResponse('잘못된 요청입니다.')
         # POST 요청이 아닐 경우 출력
+        
+        
+def transmit(request):
+    if request.method == 'POST' and request.FILES.get('image'):
+        image = request.FILES['image']
+
+        # 이미지 파일 이름 생성
+        image_name = str(uuid.uuid4()) + os.path.splitext(image.name)[1]
+        print(image_name)
+        # 이미지 파일 저장
+        with open(image_name, 'wb+') as f:
+            for chunk in image.chunks():
+                f.write(chunk)
+
+        # 이미지 파일 전송
+        files = {'image': image}
+        print(files)
+        csrf_token = csrf.get_token(request)
+        response = requests.post('http://127.0.0.1:5501/attempt%202%20_%20complete_%20crop/index_ver3_complete.html', files=files, headers={'X-CSRFToken': csrf_token})
+        print(response)
+        
+        # 전송 결과 확인 및 처리
+        if response.status_code == 200:
+            # 성공적으로 전송되었다면, 전송 결과를 JSON 형태로 반환
+            return JsonResponse({'success': True, 'response': response.json()})
+        else:
+            # 전송 실패시 에러 메시지를 JSON 형태로 반환
+            return JsonResponse({'success': False, 'message': 'Failed to upload image.'})
+
+    # POST 요청이 아니거나, 이미지 파일이 첨부되지 않았을 경우
+    return JsonResponse({'success': False, 'message': 'Image file not found.'})
