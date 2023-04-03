@@ -167,3 +167,8 @@ LOGIN_REDIRECT_URL = '/' # / 페이지는 기본 URL인 http://localhost:8000/ �
 LOGOUT_REDIRECT_URL = '/' # 로그아웃 시 리다이렉트할 위치도 config/settings.py 파일에 추가
 
 # import logging
+
+
+# 이미지 저장 경로
+MEDIA_ROOT = os.path.join(BASE_DIR, 'ocr', 'image')
+APPEND_SLASH = False

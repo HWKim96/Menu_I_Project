@@ -7,7 +7,17 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Team 2nd : Menu ' i '</title>
-
+        <script language="javascript">
+            function showPopup() {
+                window.open("/cropimg/", "Crop", "width=1000, height=900, left=500, top=500");
+            }
+        </script>
+        <script language="javascript">
+            function moveClose() {
+              opener.location.href="";
+              self.close();
+            }
+        </script>
 
 
         <style>
@@ -18,22 +28,20 @@
                 height: 100vh;
             }*/
 
-            #dropzone {
-                width: 500px;
-                height: 500px;
-                border: 5px dashed rgb(22, 214, 147);   
-                border-width: 8px;
-                text-align: center;
-                line-height: 300px;
-                font-size: 30px;
-                font-weight: bold;
-                margin-bottom: 100px;
-                margin-left: 420px;
-                color: rgb(250, 131, 12)
-                /*position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(50%, 50%)*/
+
+                #dropzone {
+                    width: 500px;
+                    height: 500px;
+                    border: 5px dashed rgb(161 74 19);
+                    border-width: 8px;
+                    text-align: center;
+                    line-height: 300px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: -74px;
+                    margin-left: 800px;
+                    color: rgb(250, 131, 12) 
+                    /*position: absolute; top: 50%; left: 50%; transform: translate(50%, 50%)*/;
                 
             }
             #image {
@@ -42,6 +50,27 @@
                 padding-left: 0rem;
             }
             
+
+            #b1{
+                width: 100px;
+                height: 40px;
+                background-color: rgb(31, 192, 52);
+                border: solid;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            #b2{
+                width: 100px;
+                height: 40px;
+                background-color: rgb(31, 192, 52);
+                border: solid;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
         </style>
 
 
@@ -106,9 +135,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#첫번째 단락">Outline.</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#개요">Outline.</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Staff</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ServiceIntroduce">Service</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#team">Staff 소개</a></li> -->
                         <li class="nav-item"><a class="nav-link" href="#contact">Let's Menu'I'</a></li>
                         <li class="nav-item dropdown">
@@ -177,8 +206,8 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">🏅 Team: Menu ' I ' 🏅</div>
-                <div class="masthead-heading text-uppercase">『Computer Vision Project』</div>
+                <div class="masthead-subheading"></div>
+                <div class="masthead-heading text-uppercase">『 Menu 'I' 』</div>
                 <!-- <a class="btn btn-primary btn-xl text-uppercase" href="#첫번째 단락">More</a> -->
             </div>
         </header>
@@ -186,7 +215,7 @@
 
         
         <!-- 첫번째 단락-->
-        <section class="page-section" id="첫번째 단락">
+        <section class="page-section" id="개요">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Menu i Logo + 기능개요</h2>
@@ -362,7 +391,7 @@
 
 
         <!-- About-->
-        <section class="page-section" id="about">
+        <section class="page-section" id="ServiceIntroduce">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">"문제정의 + 기획의도"</h2>
@@ -509,12 +538,12 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Drag & Drop Here</h2>
+                    <h2 class="section-heading text-uppercase"></h2>
                     <h3 class="section-subheading text-muted">번역하고자 하는 메뉴판 이미지를 이곳에 " Drop " 해주세요! </h3>
                 </div>
 
                 <!-- 이미지 업로드 POST -->
-                <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                <form action="{% url 'transmit' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <!-- 장고에서 지원하는 보안 토큰 -->
 
@@ -524,45 +553,38 @@
                           <input type="file" name="image" id="image-input" accept="image/*" style="display: none;" />
                           <label for="image-input" class="dropzone-label" id="image_label">Drag & Drop</label>
                         </div>
-                      </div>
+
+                        <input type="button" id="crop" class="btn btn-primary btn-xl text-uppercase" style="width:145px;" value="Crop" onclick="showPopup();">
+                        <input type="button" class="btn btn-primary btn-xl text-uppercase" style="width:145px;" value="Close" onclick="self.close();">
+                    
+                    </div>
+                </form>
                       
-                      <!-- <div class="text-center" style="width: 30em;">
-                        <form action="{% url 'upload' %}" method="POST">
-                          {% csrf_token %}
-                          <div class="input-group">
-                            <select id="language" name="language" class="form-select">
-                              <option value="en">English</option>
-                              <option value="ja">日本語</option>
-                              <option value="cn">中文</option>
+                <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="text-center" style="margin-left:770px;">
+                        <div class="input-group" style="width: 400px; margin:0 auto;">
+                            <select id="language" name="language" class="form-select mb-3" style="margin-bottom: 5px; text-align: center;">
+                                <option value="en">English</option>
+                                <option value="ja">日本語</option>
+                                <option value="cn">中文</option>
                             </select>
-                            <button type="submit" class="btn btn-primary btn-xl text-uppercase" style="margin-right: 100px;">Submit</button>
-                            <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
-                          </div>
-                        </form>
-                      </div> -->
-
-                      <div class="text-center" style="width: 300px;margin:0 auto;">
-                        <form action="{% url 'upload' %}" method="POST">
-                          {% csrf_token %}
-                          <div class="input-group">
-                            <select id="language" name="language" class="form-select">
-                              <option value="en">English</option>
-                              <option value="ja">日本語</option>
-                              <option value="cn">中文</option>
-                            </select>
-                          </div>
-                          
-                          <button type="submit" class="btn btn-primary btn-xl text-uppercase" style="width:145px;">Submit</button>
-                          <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
-                        </form>
-                      </div>
-
+                        </div>
+                        
+                        <button type="button" id="save-button" class="btn btn-primary btn-xl text-uppercase" style="width:145px; margin-bottom:5px;">Detect</button>
+                        <button type="submit" id="submit-button" class="btn btn-primary btn-xl text-uppercase" style="width:145px; margin-bottom:5px;">Submit</button>
+                        <button type="button" onclick="location.reload();" class="btn btn-primary btn-xl text-uppercase">Reset</button>
+                    </div>
                 </form>
 
                 <!-- Drag N Drop Script -->
                 <script>
                     const dropzone = document.getElementById('dropzone');
                     const imageInput = document.getElementById('image-input');
+                    const saveButton = document.getElementById('save-button');
+                    const detectButton = document.getElementById('detect-button');
+                    const form = document.querySelector('form');
                   
                     dropzone.addEventListener('dragover', e => {
                       e.preventDefault(); /* 이미지를 드래그 하는 동안 기본 동작 막아줌 */
@@ -578,6 +600,7 @@
                       e.preventDefault(); /* 이미지를 드랍할 때 기본 동작 막아줌 */
                       dropzone.classList.remove('dragover');
                       const files = e.dataTransfer.files;
+
                       /* 드롭한 파일 목록을 가져와 files 변수에 할당 */
                       if (files.length > 0) {
                         imageInput.files = files;
@@ -588,6 +611,9 @@
                         fileReader.readAsDataURL(files[0]);
                         /* 이미지 >> 데이터 URL 변환 */
                         fileReader.onload = () => {
+
+
+
                         /* 미리보기 이미지 만들기 */
                         const elementToRemove = document.getElementById('image_label');
                         const imagePreview = document.createElement('img');
@@ -611,6 +637,86 @@
                         }
                       }
                     });
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                    saveButton.addEventListener('click', () => {
+                        const formData = new FormData(form);
+                        formData.append('image', imageInput.files[0]);
+                        fetch('/save-image/', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                    });
+
+                    detectButton.addEventListener('click', () => {
+                        const formData = new FormData(form);
+                        formData.append('image', imageInput.files[0]);
+                        fetch('/detect-crop-button/', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                    });
+
+                    function sendPostRequest() {
+                        var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+                        var form_data = new FormData();
+                        form_data.append("csrfmiddlewaretoken", csrf_token);
+                        $.ajax({
+                            url: "{% url 'detect' %}",
+                            type: "POST",
+                            data: form_data,
+                            processData: false,
+                            contentType: false,
+                            success: function(response) {
+                                console.log(response);
+                            },
+                            error: function(xhr, status, error) {
+                                console.log(error);
+                            }
+                        });
+                    };
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                    var imageDataUrl = "";
+
+                    function handleDrop(e) {
+                    e.preventDefault();
+                    var files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        var file = files[0];
+                        var reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        reader.onload = function(e) {
+                        imageDataUrl = e.target.result;
+                             }
+                        }
+                    }
+
+
+                    function handleSave() {
+                        if (imageDataUrl !== "") {
+                          var newWindow = window.open();
+                          newWindow.document.write('<img src="' + imageDataUrl + '" />');
+                          // 이미지 파일이 base64 인코딩된 문자열로 전달됩니다.
+                          // 이후 다른 작업을 수행할 수 있습니다.
+                        }
+                      }
+                      
+                      
+                    document.getElementById("dropzone").addEventListener("drop", handleDrop);
+                    document.getElementById("save-button").addEventListener("click", handleSave);
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
+
+
                   </script>
                   <!-- Drag N Drop Script End -->
             </div>
@@ -885,7 +991,8 @@
         <script src="../static/sigin-in-js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact
+            -forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
