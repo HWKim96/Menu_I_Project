@@ -1,6 +1,6 @@
 from django.db import models
-from datetime import datetime
-from django.contrib.auth.models import AbstractUser
+from datetime import datetime # 현재시각 집어넣기
+from django.contrib.auth.models import AbstractUser #Django에서 제공하는 모델 클래스 사용자 인증(authentication)과 관련된 필드
 
 # class UserManager(BaseUserManager):
 #     def create_user(self, username, password=None, **kwargs):
@@ -24,7 +24,7 @@ class User(AbstractUser):
     detail_address = models.CharField(max_length=100, null=True, blank=True)
     is_admin = models.BooleanField(default=False)
 
-    USERNAME_FIELD = 'username'
+    USERNAME_FIELD = 'username' #인증 시스템에서 사용자를 식별하기 위한 필드를 지정하는 클래스 변수
 
     # # objects = UserManager()
 
