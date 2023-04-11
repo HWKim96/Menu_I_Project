@@ -91,4 +91,15 @@
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134781-c4449935-6c6b-421f-8161-7e7acf63ce96.png"/>
 
 
+<p>
 
+## 상세정보 및 소스코드
+	
+<p>
+
+- ppt <link src=>
+- 소스코드 <linck src=>
+	
+</p>
+
+</p>
