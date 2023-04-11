@@ -68,18 +68,23 @@
 
 <p>
 <br>
+#### 프로젝트의 목표
+<br>
+- 방한 외국인들의 한국어 메뉴 파악의 불편사항 개선
+- 관광 활성화를 위한 맛집 탐방시 언어 소통 불편함 해결 필요
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134242-f5fe5f66-6903-486a-acf3-a19fece9f928.png"/>
-
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134375-223a218f-924d-48cc-8821-c89aa23e9edc.png"/>
-
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134479-50101c3a-931c-4e48-8934-c0b28df6f280.png"/>
-
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134563-451b41cf-8261-4cbf-8ca6-9e2893e595c6.png"/>
-
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134643-77e51f3f-8f2b-4044-b501-b65574a31246.png"/>
-
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134694-76605482-4792-4dc7-9058-287776e29571.png"/>
-
+<br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134781-c4449935-6c6b-421f-8161-7e7acf63ce96.png"/>
 
 
