@@ -2,7 +2,7 @@
 <br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231132894-8961aa96-c22d-495d-9380-c0b91b0ee318.png"/>
 <br>
-https://user-images.githubusercontent.com/121409401/231133105-7f51bcc4-6cd0-449c-bf2f-0439644cf2c6.png
+<img width="100%" src=""/>
 
 ## 목차
 - #### 프로젝트 개요
@@ -64,6 +64,19 @@ https://user-images.githubusercontent.com/121409401/231133105-7f51bcc4-6cd0-449c
 	
 </p>
 <br>
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134242-f5fe5f66-6903-486a-acf3-a19fece9f928.png"/>
 
-## 
-수정중
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134375-223a218f-924d-48cc-8821-c89aa23e9edc.png"/>
+
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134479-50101c3a-931c-4e48-8934-c0b28df6f280.png"/>
+
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134563-451b41cf-8261-4cbf-8ca6-9e2893e595c6.png"/>
+
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134643-77e51f3f-8f2b-4044-b501-b65574a31246.png"/>
+
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134694-76605482-4792-4dc7-9058-287776e29571.png"/>
+
+<img width="100%" src="https://user-images.githubusercontent.com/121409401/231134781-c4449935-6c6b-421f-8161-7e7acf63ce96.png"/>
+
+
+
