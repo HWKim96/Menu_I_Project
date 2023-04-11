@@ -68,10 +68,14 @@
 
 <p>
 <br>
+	
 #### 프로젝트의 목표
+	
 <br>
+	
 - 방한 외국인들의 한국어 메뉴 파악의 불편사항 개선
 - 관광 활성화를 위한 맛집 탐방시 언어 소통 불편함 해결 필요
+	
 <br>
 <img width="100%" src="https://user-images.githubusercontent.com/121409401/231134242-f5fe5f66-6903-486a-acf3-a19fece9f928.png"/>
 <br>
