@@ -1,6 +1,6 @@
 # Menu "I"
 <br>
-<img width="https://user-images.githubusercontent.com/121409401/231132894-8961aa96-c22d-495d-9380-c0b91b0ee318.png"/>
+<img src="https://user-images.githubusercontent.com/121409401/231132894-8961aa96-c22d-495d-9380-c0b91b0ee318.png"/>
 <br>
 https://user-images.githubusercontent.com/121409401/231133105-7f51bcc4-6cd0-449c-bf2f-0439644cf2c6.png
 
