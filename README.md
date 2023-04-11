@@ -97,8 +97,8 @@
 	
 <p>
 
-- 발표자료 <link src=>
-- 소스코드 <linck src=>
+- 발표자료: https://docs.google.com/presentation/d/1OM1CGf78Ov7BJi6bIudoxlXHnV7nw-iC/edit?usp=share_link&ouid=117995177140063822568&rtpof=true&sd=true
+- 소스코드: https://drive.google.com/drive/folders/1E65146541sa6d51ad21qw6d51a32s1dc65qw4d32as1c654asw
 	
 </p>
 
