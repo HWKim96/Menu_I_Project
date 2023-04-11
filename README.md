@@ -1,7 +1,8 @@
 # Menu "I"
 <br>
-<img width="100%" src="https://user-images.githubusercontent.com/126048063/221100739-1cd3d19d-dc01-4f6b-965d-b794810d1081.png"/>
+<img width="https://user-images.githubusercontent.com/121409401/231132894-8961aa96-c22d-495d-9380-c0b91b0ee318.png"/>
 <br>
+
 
 ## 목차
 - #### 프로젝트 개요
