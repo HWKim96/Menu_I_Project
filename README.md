@@ -97,7 +97,7 @@
 	
 <p>
 
-- ppt <link src=>
+- 발표자료 <link src=>
 - 소스코드 <linck src=>
 	
 </p>
